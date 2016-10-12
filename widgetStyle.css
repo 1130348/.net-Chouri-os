@@ -1,0 +1,82 @@
+tr{font:11pt verdana}
+select{font:8pt verdana}
+.rotulo{text-align:right;
+color:navy}
+#boxform {border: solid #33CCFF;
+background-color: #DDDDDD;
+width:75%;
+margin-left: auto;
+margin-right: auto;
+}
+.tableform { margin-left: auto;
+margin-right: auto;
+}
+input, select, textarea{
+background-color: white;
+}
+button{
+border:none;
+background-color: white;
+}
+.rotateimg180 {
+	-webkit-transform:rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+.rotateimg0 {
+	-webkit-transform:rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	width: auto;
+    height: auto;
+    overflow: auto;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+	
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {background-color: #ccc;}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+	
+}
+
+div{
+	border: 1px solid #ccc;
+	width: 200px;
+}
+
+button:focus {outline:0;}
