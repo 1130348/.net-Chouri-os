@@ -1,141 +1,33 @@
-var count=0;
+
 function myFunction() {
+	
 	var img = document.getElementById("imgdr");
+	//var myNode = document.getElementById("myDivId");
+	var myCon = document.getElementById("pesquisa");
 	if(img.className=="rotateimg180"){
 		img.setAttribute("class", "rotateimg0");
-		var myNode = document.getElementById("myDivId");
-		while (myNode.firstChild) {
-			myNode.removeChild(myNode.firstChild);
-		}
-		count=4;
-		
-		
+	
+		//myNode.style.display = "none";
+		myCon.style.display = "none";
 	}else{
-		img.setAttribute("class", "rotateimg180");
 		
+		img.setAttribute("class", "rotateimg180");
+		//myNode.style.display = "block";
+		myCon.style.display = "block";
 	}
 	
 }
 
 
-
-/*function criarFaceta(){
-	
-	var nodelist=docFac1.getElementsByTagName("faceta");
-
-	var noFac,i,u;
-	var noCampo;
-	
-	
-
-	
-	//Criar Facetas info
-	for( i=0;i<nodelist.length;i++){
-		
-		noFac=document.createElement("DIV");
-		noFac.id=count;
-		noFac.className="tabcontent";
-		
-		noFac.appendChild(document.createElement("P"));
-	
-		alert(docFac1);
-		if(docFac1){
-			alert("OLA");
-		var noFacetasList = docFac1.getElementsById(i);
-		
-			for( u=0;i<noFacetasList.length;u++){
-				noCampo=noFacetasList[u].firstChild.nodeValue;
-				alert(noCampo);
-				noFac.appendChild(document.createTextNode(noCampo.firstChild.nodeValue));
-			}
-		}
-		
-		document.body.appendChild(noFac);
-
-	}
-	
-}*/
-
-
-/*var docFac1,docFac2,docFac3,docFac4;
-function getFacetas(){
-	
-	docFac1=MakeXMLHTTPCall("http://phpdev2.dei.isep.ipp.pt/~arqsi/smartcity/facetas.php?sensor=1");
-	docFac2=MakeXMLHTTPCall("http://phpdev2.dei.isep.ipp.pt/~arqsi/smartcity/facetas.php?sensor=2");
-	docFac3=MakeXMLHTTPCall("http://phpdev2.dei.isep.ipp.pt/~arqsi/smartcity/facetas.php?sensor=3");
-	docFac4=MakeXMLHTTPCall("http://phpdev2.dei.isep.ipp.pt/~arqsi/smartcity/facetas.php?sensor=4");
-		
-	
-}*/
-
-
-/*function displaySensores( ){
-	
-	var img = document.getElementById("imgdr");
-	if(img.className!="rotateimg180"){
-			MakeXMLHTTPCall("http://phpdev2.dei.isep.ipp.pt/~nsilva/smartcity/sensores.php");
-	}
-
-	
-}*/
-
 var xmlHttpObj;
-//var doc, doc2;
+var count,count2;
 
-/*function MakeXMLHTTPCall(Url){
-	
-	xmlHttpObj = new XMLHttpRequest();
 
-		if (xmlHttpObj){
-	
-			xmlHttpObj.open("GET",Url, true);
-			xmlHttpObj.onreadystatechange = function(){
-				
-				stateHandler();	
-				
-			} 
-			xmlHttpObj.send(null);
-		
-		}
-		
-	return xmlHttpObj.onreadystatechange();
-	 
-}*/
-
-/*function CreateXmlHttpRequestObject(){
-	
-	
-	
-}*/
-
-/*function stateHandler(){
-	
-	if ( xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200 ){
-		
-		
-		if(count==4){
-			doc = xmlHttpObj.responseXML;
-	
-			criarListaSensores();
-			count++;
-			
-			return doc;
-			
-		}else{
-			alert("Paasa");
-			doc2=xmlHttpObj.responseXML;
-			//criarFaceta(count);
-			
-			return doc2;
-		}
-		
-	}
-}*/
-
-/*function openSensor(evt, sensorId) {
+function openSensor(evt, sensorId) {
+	myFunction();
     // Declare all variables
     var i, tabcontent, tablinks;
-	var noFaid =document.getElementById(sensorId);
+	var noFaid =document.getElementById("faceta"+sensorId);
 
     // Get all elements with class="tabcontent" and hide them
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -153,55 +45,45 @@ var xmlHttpObj;
     noFaid.style.display = "block";
 	
     evt.currentTarget.className += " active";
-}*/
+}
 
-
-/*function criarListaSensores(){
+function addEvent(){ 
 	
+	var noA = document.getElementsByTagName("a");
+	var i;
+	var list;
+	list=noA.length;
 	
-	var nodelist=doc.getElementsByTagName("nome");
-	var elementDiv=document.getElementById("myDivId");
-	var noCheck1,texto2,label,i,lin,noFac,u,l;
-	var noCampo;
-	
-	
-	var noUl=document.createElement("UL");
-	noUl.className="tab";
-	
-	
-	//Criar Sensores
-	for( i=0;i<nodelist.length;i++){
-		
-		lin = document.createElement("li")
-		
-		noA = document.createElement("a")
-		noA.href="#";
-		noA.id=i+1;
-		noA.className="tablinks";
-		noA.addEventListener("click",function(){
-			openSensor(event,i);
+	noA[0].addEventListener("click",function(){
+			openSensor(event,0);
 		});
 		
+		noA[1].addEventListener("click",function(){
+			openSensor(event,1);
+		});
 		
-		texto2 =nodelist[i].firstChild.nodeValue;//nodeValue
-		noA.appendChild(document.createTextNode(texto2));
+		noA[2].addEventListener("click",function(){
+			openSensor(event,2);
+		});
 		
-		lin.appendChild(noA);
-		
-		noUl.appendChild(lin);	
-
-	}
+		noA[3].addEventListener("click",function(){
+			openSensor(event,3);
+		});
 	
-	elementDiv.appendChild(noUl);
+	/*while(list>0){
+		alert(count2);
+		noA[count2].addEventListener("click",function(){
+			openSensor(event,count2);
+		});
+		count2++;
+		list--;
+	}*/
 	
-	
-	//criarFaceta();
-	
-	
-}*/
+}
 
 function getFacetasAJAX(){
-	
+	count=0;
+	count2=0;
 	var url = "http://phpdev2.dei.isep.ipp.pt/~arqsi/smartcity/sensores.php";
 	root_element = document.getElementById("myDivId");
 	makeXmlHttpGetCall(url, null, true, true, getFacetasXML, [root_element]);
@@ -250,16 +132,46 @@ function getFacetasXML() {
 
 function preencheFacetas(facetas){
 	
-	var strHTML="";
-
+	var elementDiv=document.getElementById("myDivId");
+	var noCheck1,label,i,lin,noFac,u,l,noA;
+	var noCampo;
+	
+	var noUl=document.createElement("UL");
+	noUl.className="tab";
+	//alert(facetas.length);
 	for(i = 0; i < facetas.length; i++){
 		
 		faceta = facetas[i];
-		strHTML += faceta + "</br>";
+	
 		getValoresFacetaAJAX(i);
+				
+		lin = document.createElement("li")
+		
+		noA = document.createElement("a")
+		noA.href="#";
+		noA.id="sensor"+i;
+		noA.className="tablinks";
+	
+		/*noA.onclick=function(){
+		openSensor(event,noA.id);
+		};*/
+
+		noA.appendChild(document.createTextNode(faceta));
+		
+		lin.appendChild(noA);
+		
+		noUl.appendChild(lin);	
+		
+		
+		
 	}
 	
-	document.body.innerHTML = strHTML;
+	
+	
+	elementDiv.appendChild(noUl);
+	
+	addEvent();
+
 } 
 
 
@@ -267,46 +179,74 @@ function preencheFacetas(facetas){
 function getValoresFacetaAJAX(i){
 	i=i+1;
 	
+	var url="http://phpdev2.dei.isep.ipp.pt/~arqsi/smartcity/facetas.php?sensor=" +i;
 	xmlHttpObj = new XMLHttpRequest();
 	if (xmlHttpObj) {
+		
 		xmlHttpObj.onreadystatechange = getValoresFacetaJSON;
-		xmlHttpObj.open("GET","http://phpdev2.dei.isep.ipp.pt/~arqsi/smartcity/facetas.php?sensor=" +i, true);
+		xmlHttpObj.open("GET",url, true);
 		xmlHttpObj.send(null);
 	}
 }
 
 function getValoresFacetaJSON(){
+	
+	
 	var facet =[];
 	var i,doc2;
 	
 	if ( xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
-	
+		
 		doc2 = xmlHttpObj.responseXML;
-		alert(doc2);
 		
 		fac=doc2.getElementsByTagName("Nome");
-		alert(fac.length);
-		for(i=0;i<fac.length;i++){
-			
-			facet[i]=fac[i].firstChild.nodeValue;
 		
+		for(i=0;i<fac.length;i++){
+
+			facet[i]=fac[i].firstChild.nodeValue;
+			
 		}
 		
 		preencheValoresFaceta(facet);
-		alert("ola4");
+		count++;
+		
+		
 	}
 }
 
 function preencheValoresFaceta(valoresFaceta){
 	
-	var strHTML;
-	//alert(ola3);
+
+	var elementDiv=document.getElementById("pesquisa");
+	var noA = document.getElementsByTagName("a");
+	var noFac,i,u,nP,j;
+	var noCampo,newCheckBox,label;
+	
+	noFac=document.createElement("DIV");
+	noFac.id="faceta"+count;
+	noFac.className="tabcontent";
+	
+	
+	
 	for(j = 0; j < valoresFaceta.length; j++) {
-		strHTML += "<input type=checkbox name=" + j + " value=" + valoresFaceta[j] + ">"
-		+ valoresFaceta[j] + "</input></br>";
+		
+		
+		newCheckBox = document.createElement("input");
+		newCheckBox.type = "checkbox";
+		newCheckBox.id ="facetaCheckbox"+j;
+		
+		label = document.createElement('label')
+		label.appendChild(document.createTextNode(valoresFaceta[j]));
+		
+		
+		noFac.appendChild(newCheckBox);
+		noFac.appendChild(label);
+		noFac.appendChild(document.createElement("BR"));
 	}
 	
-	document.body.innerHTML = strHTML;
+	elementDiv.appendChild(noFac);
+	
+	
 
 } 
 

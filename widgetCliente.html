@@ -9,11 +9,12 @@
 		<link rel="stylesheet" type="text/css" href="widgetStyle.css">
 	</head>
 	<body onload="getFacetasAJAX()">
-		<button type="submit" onclick="myFunction()">
-			<img src="eject.png" id="imgdr" alt="show" class="none"> Lista Sensores
+		
+		<div id="myDivId" style="display: block;"></div>
+		<div id="container" class="container" >
+		<button type="submit" onclick="myFunction()" class="rotateimg0">
+				<img src="eject.png" id="imgdr" alt="show" class="none"> Lista Sensores
 		</button>
-		<div id="myDivId" ></div>
-		<div id="container" style="width:200px" >
 			<div id="pesquisa" ></div>
 			<div id="resultados" ></div>
 		</div>

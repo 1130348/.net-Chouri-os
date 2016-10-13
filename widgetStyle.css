@@ -74,9 +74,15 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 	
 }
 
+.container{
+	border: 1px solid #ccc;
+	width: 350px;
+	height: 200px;
+}
+
 div{
 	border: 1px solid #ccc;
-	width: 200px;
+	width: 350px;
 }
 
 button:focus {outline:0;}
