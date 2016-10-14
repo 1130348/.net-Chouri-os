@@ -20,7 +20,7 @@ function myFunction() {
 
 
 var xmlHttpObj;
-var count,count2;
+var count,count2,countFac,countFac2;
 
 
 function openSensor(evt, sensorId) {
@@ -84,11 +84,19 @@ function addEvent(){
 function getFacetasAJAX(){
 	count=0;
 	count2=0;
+	countFac=0;
+	countFac2=0;
 	var url = "http://phpdev2.dei.isep.ipp.pt/~arqsi/smartcity/sensores.php";
 	root_element = document.getElementById("myDivId");
 	makeXmlHttpGetCall(url, null, true, true, getFacetasXML, [root_element]);
 
 } 
+
+function addCounter(){
+	alert("Adding");
+	countFac++;
+	
+}
 
 function makeXmlHttpGetCall(url, params, async, xml, callback, args){
 	xmlHttpObj = new XMLHttpRequest();
@@ -101,6 +109,7 @@ function makeXmlHttpGetCall(url, params, async, xml, callback, args){
 						response = xmlHttpObj.responseXML;
 					
 					}else{
+						
 						response = xmlHttpObj.responseText;
 					}
 					callback(response,args);
@@ -116,17 +125,20 @@ function getFacetasXML() {
 	var facetas =[];
 	if ( xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
 		
-		var xml = xmlHttpObj.responseXML;
-		facetasXML = xml.getElementsByTagName("nome");
-		
-		
-		for(i=0;i<facetasXML.length;i++){
+		if(countFac==countFac2){
+			var xml = xmlHttpObj.responseXML;
+			facetasXML = xml.getElementsByTagName("nome");
 			
-			facetas[i] = facetasXML[i].firstChild.nodeValue;
-	
-		}
+			
+			for(i=0;i<facetasXML.length;i++){
+				
+				facetas[i] = facetasXML[i].firstChild.nodeValue;
 		
-		preencheFacetas(facetas);
+			}
+			
+			preencheFacetas(facetas);
+			
+		}
 	}
 } 
 
@@ -143,7 +155,7 @@ function preencheFacetas(facetas){
 		
 		faceta = facetas[i];
 	
-		getValoresFacetaAJAX(i);
+		getValoresFacetaAJAX(i,addCounter);
 				
 		lin = document.createElement("li")
 		
@@ -186,6 +198,7 @@ function getValoresFacetaAJAX(i){
 		xmlHttpObj.onreadystatechange = getValoresFacetaJSON;
 		xmlHttpObj.open("GET",url, true);
 		xmlHttpObj.send(null);
+		
 	}
 }
 
@@ -195,23 +208,44 @@ function getValoresFacetaJSON(){
 	var facet =[];
 	var i,doc2;
 	
-	if ( xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
-		
-		doc2 = xmlHttpObj.responseXML;
-		
-		fac=doc2.getElementsByTagName("Nome");
-		
-		for(i=0;i<fac.length;i++){
-
-			facet[i]=fac[i].firstChild.nodeValue;
+	if( xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
+	
+		if(countFac==countFac2){
+			doc2 = xmlHttpObj.responseXML;
 			
+			fac=doc2.getElementsByTagName("Nome");
+			
+			for(i=0;i<fac.length;i++){
+
+				facet[i]=fac[i].firstChild.nodeValue;
+				
+			}
+			
+			preencheValoresFaceta(facet);
+			count++;
+			
+			countFac2++;
 		}
 		
-		preencheValoresFaceta(facet);
-		count++;
-		
+	
 		
 	}
+}
+
+function OnChangeCheckbox () {
+		var checkbox = event.target;
+		if (checkbox.checked) {
+			alert ("The check box is checked.");
+		}
+		else {
+			alert ("The check box is not checked.");
+		}
+}
+
+function search () {
+		
+	alert ("Search Started");
+		
 }
 
 function preencheValoresFaceta(valoresFaceta){
@@ -234,6 +268,9 @@ function preencheValoresFaceta(valoresFaceta){
 		newCheckBox = document.createElement("input");
 		newCheckBox.type = "checkbox";
 		newCheckBox.id ="facetaCheckbox"+j;
+		newCheckBox.addEventListener ("CheckboxStateChange", function(){
+			OnChangeCheckbox;
+		});
 		
 		label = document.createElement('label')
 		label.appendChild(document.createTextNode(valoresFaceta[j]));
@@ -244,11 +281,20 @@ function preencheValoresFaceta(valoresFaceta){
 		noFac.appendChild(document.createElement("BR"));
 	}
 	
+	var btn = document.createElement("BUTTON");
+	var t = document.createTextNode("Resultados");  
+	btn.addEventListener("click",search);
+	btn.appendChild(t);  
+	noFac.appendChild(btn);
+	
 	elementDiv.appendChild(noFac);
 	
-	
+	countFac++;
 
 } 
+
+
+
 
 
 
