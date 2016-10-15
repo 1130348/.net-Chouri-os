@@ -6,7 +6,7 @@ color:navy}
 background-color: #DDDDDD;
 width:75%;
 margin-left: auto;
-margin-right: auto;
+margin-right:auto;
 }
 .tableform { margin-left: auto;
 margin-right: auto;
@@ -17,6 +17,8 @@ background-color: white;
 button{
 border:none;
 background-color: white;
+position:relative;
+left:550px;
 }
 .rotateimg180 {
 	-webkit-transform:rotate(180deg);
@@ -40,6 +42,8 @@ ul.tab {
 	width: auto;
     height: auto;
     overflow: auto;
+	position:relative;
+	left:550px;
     
     background-color: #f1f1f1;
 }
@@ -85,8 +89,7 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 	border: 1px solid #ccc;
 	border-style: solid;
 	position:relative;
-    top:50%; 
-    left:40%;
+    right:450px;
 }
 
 table {
@@ -110,9 +113,12 @@ th {
 }
 
 div{
-
+	position:relative;
+	left:200px;
 	width: 350px;
 	max-width: 350px;
+	
+	
 	
 }
 
