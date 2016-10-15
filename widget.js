@@ -356,6 +356,7 @@ function getOpcoesFaceta(checkbox){
 var nomeFaceta=checkbox.id.replace("checkbox","");
 var nomeSensor=checkbox.parentElement.id.replace("faceta","");
 
+/*
 switch(nomeSensor){
 	case "0":
 		nomeSensor="Temperatura";
@@ -369,6 +370,15 @@ switch(nomeSensor){
 	case "3":
 		nomeSensor="Atividade_cardiaca";
 		break;
+}*/
+if(nomeSensor.toUpperCase == "Temperatura".toUpperCase){
+	nomeSensor="Temperatura";
+}else if(nomeSensor.toUpperCase == "Qualidade_do_ar".toUpperCase){
+	nomeSensor="Qualidade_do_ar";
+}else if(nomeSensor.toUpperCase == "Fluxo_de_transito".toUpperCase){
+	nomeSensor="Fluxo_de_transito";
+}else if(nomeSensor.toUpperCase == "Atividade_cardiaca".toUpperCase){
+	nomeSensor="Atividade_cardiaca";
 }
 	
 var url="http://phpdev2.dei.isep.ipp.pt/~arqsi/smartcity/valoresFacetadoSensor.php?sensor="+nomeSensor+"&faceta="+nomeFaceta;
