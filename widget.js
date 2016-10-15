@@ -25,6 +25,11 @@ var count,count2,countFac,countFac2;
 
 function openSensor(evt, sensorId) {
 	myFunction();
+	pes=document.getElementById("resultados");
+	while (pes.firstChild) {
+		pes.removeChild(pes.firstChild);
+	}	
+	pes.style.display="none";
     // Declare all variables
     var i, tabcontent, tablinks;
 	var noFaid =document.getElementById("faceta"+sensorId);
@@ -93,7 +98,7 @@ function getFacetasAJAX(){
 } 
 
 function addCounter(){
-	alert("Adding");
+
 	countFac++;
 	
 }
@@ -230,30 +235,51 @@ function getValoresFacetaJSON(){
 	
 		
 	}
+	
+	lo=document.getElementById("pesquisa");
+	lo.onload=document.getElementById("myDivId").style.display="block";
 }
 
 function OnChangeCheckbox () {
-		var checkbox = event.target;
-		if (checkbox.checked) {
-			alert ("The check box is checked.");
+	
+	var checkbox = event.target;
+	if (checkbox.checked) {
+		if(checkbox.id.indexOf("Data")!=-1){
+			diva=document.createElement("DIV");
+			diva.name="div";
+			da=document.createElement("INPUT");
+			da.type="date";
+			da.max="2010-12-31";
+			diva.appendChild(da);
+			var child = checkbox.parentElement.children[2];
+			checkbox.parentElement.insertBefore(diva,child);
+			
+			
 		}
-		else {
-			alert ("The check box is not checked.");
-		}
+	}
+	else {
+		listChildren=checkbox.parentElement.children;
+
+		for(i=0;i<listChildren.length;i++){
+			
+			if(listChildren[i].name=="div"){
+				console.log(listChildren[i]);
+				divR=listChildren[i];
+				checkbox.parentElement.removeChild(divR);
+			}
+			
+		}	
+		
+	}
 }
 
-function search () {
-		
-	alert ("Search Started");
-		
-}
 
 function preencheValoresFaceta(valoresFaceta){
 	
 
 	var elementDiv=document.getElementById("pesquisa");
 	var noA = document.getElementsByTagName("a");
-	var noFac,i,u,nP,j;
+	var noFac,i,u,nP,j,btn;
 	var noCampo,newCheckBox,label;
 	
 	noFac=document.createElement("DIV");
@@ -267,12 +293,15 @@ function preencheValoresFaceta(valoresFaceta){
 		
 		newCheckBox = document.createElement("input");
 		newCheckBox.type = "checkbox";
-		newCheckBox.id ="facetaCheckbox"+j;
-		newCheckBox.addEventListener ("CheckboxStateChange", function(){
-			OnChangeCheckbox;
-		});
+		newCheckBox.className="checkbox";
+		newCheckBox.id ="checkbox"+j+valoresFaceta[j];
+		newCheckBox.addEventListener ("click", OnChangeCheckbox);
 		
-		label = document.createElement('label')
+		/*newCheckBox.addEventListener ("CheckboxStateChange", function(){
+			
+		});*/
+		
+		label = document.createElement('label');
 		label.appendChild(document.createTextNode(valoresFaceta[j]));
 		
 		
@@ -281,17 +310,74 @@ function preencheValoresFaceta(valoresFaceta){
 		noFac.appendChild(document.createElement("BR"));
 	}
 	
-	var btn = document.createElement("BUTTON");
-	var t = document.createTextNode("Resultados");  
-	btn.addEventListener("click",search);
-	btn.appendChild(t);  
+	btn = document.createElement("BUTTON");
+	btn.id="buttonRes"+count;
+	btn.setAttribute("type", "submit");
+	btn.setAttribute("class","buttonSubmit");
+	btn.appendChild(document.createTextNode("Resultados"));  
+
 	noFac.appendChild(btn);
 	
 	elementDiv.appendChild(noFac);
 	
 	countFac++;
+	
+	addEventButtonResultados();
 
 } 
+
+function addEventButtonResultados(){
+	var c,r,t,pesquisa;
+	var btn=document.getElementById("buttonRes"+count);
+	btn.addEventListener("click", function(e) {
+		
+	var facetas=document.getElementsByClassName("tabcontent");
+	
+		for(i=0;i<facetas.length;i++){
+			
+			if(facetas[i].style.display=="block"){
+				
+				var checkBoxes=facetas[i].getElementsByClassName("checkbox");
+				
+				for(l=0;l<checkBoxes.length;l++){
+				
+					if(checkBoxes[l].checked){
+						pesquisa=pesquisa+";"+checkBoxes[i];
+					}
+				}
+			}
+		}
+		
+		
+		pes=document.getElementById("resultados");
+		while (pes.firstChild) {
+			
+			pes.removeChild(pes.firstChild);
+			
+		}	
+		/*resultr=document.createElement("TR");
+		resultd=document.createElement("TD");
+		resultd.appendChild(document.createTextNode("Ola"));
+		resultr.appendChild(resultd);*/
+		var t = document.createElement("TABLE");
+		for(l=0;l<20;l++){
+			r = t.insertRow(l); 
+			for(i=0;i<20;i++){
+			c = r.insertCell(i);
+			c.appendChild(document.createTextNode("Ola"));
+		}
+		}
+		
+		
+		
+		
+		//x.appendChild(resultr);
+		pes.appendChild(t);
+		pes.style.display = "block";
+		
+	});
+	
+}
 
 
 

@@ -40,7 +40,7 @@ ul.tab {
 	width: auto;
     height: auto;
     overflow: auto;
-    border: 1px solid #ccc;
+    
     background-color: #f1f1f1;
 }
 
@@ -69,21 +69,46 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
+    
     border-top: none;
 	width: 300px;
 	
 }
 
 .container{
-	border: 1px solid #ccc;
+	
 	width: 350px;
 	height: 200px;
 }
 
-div{
+.buttonSubmit{
 	border: 1px solid #ccc;
+	border-style: solid;
+	position:relative;
+    top:50%; 
+    left:40%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th {
+    text-align: left;
+}
+.divResultados{
+	overflow: scroll;
+	max-height: 200px;
+}
+div{
+
 	width: 350px;
+	max-width: 350px;
+	
 }
 
 button:focus {outline:0;}
