@@ -393,6 +393,7 @@ var url="http://phpdev2.dei.isep.ipp.pt/~arqsi/smartcity/valoresFacetadoSensor.p
 				
 				diva=document.createElement("DIV");
 				diva.name="div";
+				diva.className="intoPesquisa";
 				
 				for(y=0;y<partsOfStr.length;y++){
 					da=document.createElement("INPUT");
@@ -436,6 +437,7 @@ function OnChangeCheckbox () {
 			
 			diva=document.createElement("DIV");
 			diva.name="div";
+			diva.className="intoPesquisa";
 			da=document.createElement("INPUT");
 			da.type="date";
 			da.max="2010-12-31";
@@ -458,6 +460,7 @@ function OnChangeCheckbox () {
 			
 			diva=document.createElement("DIV");
 			diva.name="div";
+			diva.className="intoPesquisa";
 			
 			diva.appendChild(document.createElement("BR"));
 			diva.appendChild(document.createTextNode(" De : "));
@@ -552,6 +555,7 @@ function OnChangeCheckbox () {
 				
 			diva=document.createElement("DIV");
 			diva.name="div";
+			diva.className="intoPesquisa";
 			
 			textBox=document.createElement("INPUT");
 			textBox.placeholder="Temperatura";
@@ -569,6 +573,7 @@ function OnChangeCheckbox () {
 		if(checkbox.id.indexOf("Latitude")!=-1){
 			diva=document.createElement("DIV");
 			diva.name="div";
+			diva.className="intoPesquisa";
 			
 			textBox=document.createElement("INPUT");
 			textBox.placeholder="GPS Latitude";
@@ -580,6 +585,7 @@ function OnChangeCheckbox () {
 		if(checkbox.id.indexOf("Longitude")!=-1){
 			diva=document.createElement("DIV");
 			diva.name="div";
+			diva.className="intoPesquisa";
 			
 			textBox=document.createElement("INPUT");
 			textBox.placeholder="GPS Longitude";
@@ -594,6 +600,7 @@ function OnChangeCheckbox () {
 			
 			diva=document.createElement("DIV");
 			diva.name="div";
+			diva.className="intoPesquisa";
 			
 			diva.appendChild(document.createElement("BR"));
 			diva.appendChild(document.createTextNode(" GPS : "));
@@ -614,6 +621,7 @@ function OnChangeCheckbox () {
 		if(checkbox.id.indexOf("Preço")!=-1){
 			diva=document.createElement("DIV");
 			diva.name="div";
+			diva.className="intoPesquisa";
 			
 			diva.appendChild(document.createElement("BR"));
 			
