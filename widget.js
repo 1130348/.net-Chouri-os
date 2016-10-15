@@ -1,3 +1,6 @@
+var s;
+var xmlHttpObj;
+var count,count2,countFac,countFac2;
 
 function myFunction() {
 	
@@ -17,10 +20,6 @@ function myFunction() {
 	}
 	
 }
-
-
-var xmlHttpObj;
-var count,count2,countFac,countFac2;
 
 
 function openSensor(evt, sensorId) {
@@ -87,6 +86,7 @@ function addEvent(){
 }
 
 function getFacetasAJAX(){
+	i=0;
 	count=0;
 	count2=0;
 	countFac=0;
@@ -155,12 +155,12 @@ function preencheFacetas(facetas){
 	
 	var noUl=document.createElement("UL");
 	noUl.className="tab";
-	//alert(facetas.length);
+	
 	for(i = 0; i < facetas.length; i++){
 		
 		faceta = facetas[i];
 	
-		getValoresFacetaAJAX(i,addCounter);
+		getValoresFacetaAJAX();
 				
 		lin = document.createElement("li")
 		
@@ -169,10 +169,6 @@ function preencheFacetas(facetas){
 		noA.id="sensor"+i;
 		noA.className="tablinks";
 	
-		/*noA.onclick=function(){
-		openSensor(event,noA.id);
-		};*/
-
 		noA.appendChild(document.createTextNode(faceta));
 		
 		lin.appendChild(noA);
@@ -193,15 +189,15 @@ function preencheFacetas(facetas){
 
 
 
-function getValoresFacetaAJAX(i){
+function getValoresFacetaAJAX(){
 	i=i+1;
 	
-	var url="http://phpdev2.dei.isep.ipp.pt/~arqsi/smartcity/facetas.php?sensor=" +i;
+	var url="http://phpdev2.dei.isep.ipp.pt/~arqsi/smartcity/facetas.php?sensor="+i;
 	xmlHttpObj = new XMLHttpRequest();
 	if (xmlHttpObj) {
 		
 		xmlHttpObj.onreadystatechange = getValoresFacetaJSON;
-		xmlHttpObj.open("GET",url, true);
+		xmlHttpObj.open("GET",url, false);
 		xmlHttpObj.send(null);
 		
 	}
@@ -243,7 +239,9 @@ function getValoresFacetaJSON(){
 function OnChangeCheckbox () {
 	
 	var checkbox = event.target;
+	
 	if (checkbox.checked) {
+
 		if(checkbox.id.indexOf("Data")!=-1){
 			diva=document.createElement("DIV");
 			diva.name="div";
@@ -251,10 +249,110 @@ function OnChangeCheckbox () {
 			da.type="date";
 			da.max="2010-12-31";
 			diva.appendChild(da);
-			var child = checkbox.parentElement.children[2];
+			var num=0;
+			for(h=0;h<checkbox.parentElement.children.length;h++){
+				
+				if(checkbox==checkbox.parentElement.children[h]){
+					console.log(checkbox.parentElement.children[h]);
+					num=h+2;
+				}
+			}
+			console.log(num);
+			var child = checkbox.parentElement.children[num];
 			checkbox.parentElement.insertBefore(diva,child);
 			
 			
+		}
+		if(checkbox.id.indexOf("Hora")!=-1){
+			console.log("Hora");
+		}
+		if(checkbox.id.indexOf("Temp")!=-1){
+			console.log("Temp");
+		}
+		if(checkbox.id.indexOf("Local")!=-1){
+			var nomeFaceta=checkbox.id.replace("checkbox","");
+			var nomeSensor=checkbox.parentElement.id.replace("faceta","");
+			console.log(nomeFaceta);
+			console.log(nomeSensor);
+			var url="http://phpdev2.dei.isep.ipp.pt/~arqsi/smartcity/valoresFacetadoSensor.php?sensor="+nomeSensor+"&faceta="+nomeFaceta;
+			
+			xmlHttpObj = new XMLHttpRequest();
+			if (xmlHttpObj) {
+				
+				
+				xmlHttpObj.onreadystatechange  = function() {
+					if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
+						
+						var options = xmlHttpObj.responseText;
+					
+						options=options.replace("[","");
+						options=options.replace("]","");
+						options=options.replace("\"","");
+						options=options.replace("\"","");
+						options=options.replace("\"","");
+						options=options.replace("\"","");
+						
+						var partsOfStr = options.split(',');
+						
+						
+						diva=document.createElement("DIV");
+						diva.name="div";
+						
+						for(y=0;y<partsOfStr.length;y++){
+							da=document.createElement("INPUT");
+							da.type="checkbox";
+							da.className="checkboxValores";
+							
+							diva.appendChild(da);
+							diva.appendChild(document.createTextNode(partsOfStr[y]));
+							diva.appendChild(document.createElement("BR"));
+						}
+						
+						
+						var num=0;
+						for(h=0;h<checkbox.parentElement.children.length;h++){
+							
+							if(checkbox==checkbox.parentElement.children[h]){
+								
+								num=h+2;
+							}
+						}
+						
+						var child = checkbox.parentElement.children[num];
+						checkbox.parentElement.insertBefore(diva,child);
+				
+					}
+				};
+				xmlHttpObj.open("GET",url, true);
+				xmlHttpObj.send(null);
+				
+			}
+		
+			
+		}
+		if(checkbox.id.indexOf("Latitude")!=-1){
+			console.log("Latitude");
+		}
+		if(checkbox.id.indexOf("Longitude")!=-1){
+			console.log("Longitude");
+		}
+		if(checkbox.id.indexOf("GPS")!=-1){
+			console.log("GPS");
+		}
+		if(checkbox.id.indexOf("Preco")!=-1){
+			console.log("Preco");
+		}
+		if(checkbox.id.indexOf("Fonte")!=-1){
+			console.log("Fonte");
+		}
+		if(checkbox.id.indexOf("Valor")!=-1){
+			console.log("Valor");
+		}
+		if(checkbox.id.indexOf("Foto")!=-1){
+			console.log("Foto");
+		}
+		if(checkbox.id.indexOf("Indicador")!=-1){
+			console.log("Indicador");
 		}
 	}
 	else {
@@ -275,54 +373,53 @@ function OnChangeCheckbox () {
 
 
 function preencheValoresFaceta(valoresFaceta){
+	//lista=document.getElementsByTagName("a");
 	
-
 	var elementDiv=document.getElementById("pesquisa");
 	var noA = document.getElementsByTagName("a");
 	var noFac,i,u,nP,j,btn;
 	var noCampo,newCheckBox,label;
 	
 	noFac=document.createElement("DIV");
-	noFac.id="faceta"+count;
-	noFac.className="tabcontent";
-	
-	
-	
-	for(j = 0; j < valoresFaceta.length; j++) {
+	//if(lista[count]!=null){
+		
+		noFac.id="faceta"+count;
+		noFac.className="tabcontent";
 		
 		
-		newCheckBox = document.createElement("input");
-		newCheckBox.type = "checkbox";
-		newCheckBox.className="checkbox";
-		newCheckBox.id ="checkbox"+j+valoresFaceta[j];
-		newCheckBox.addEventListener ("click", OnChangeCheckbox);
 		
-		/*newCheckBox.addEventListener ("CheckboxStateChange", function(){
+		for(j = 0; j < valoresFaceta.length; j++) {
 			
-		});*/
+			
+			newCheckBox = document.createElement("input");
+			newCheckBox.type = "checkbox";
+			newCheckBox.className="checkbox";
+			newCheckBox.id ="checkbox"+valoresFaceta[j];
+			newCheckBox.addEventListener ("click", OnChangeCheckbox);
+			
+			label = document.createElement('label');
+			label.appendChild(document.createTextNode(valoresFaceta[j]));
+			
+			
+			noFac.appendChild(newCheckBox);
+			noFac.appendChild(label);
+			noFac.appendChild(document.createElement("BR"));
+		}
 		
-		label = document.createElement('label');
-		label.appendChild(document.createTextNode(valoresFaceta[j]));
-		
-		
-		noFac.appendChild(newCheckBox);
-		noFac.appendChild(label);
-		noFac.appendChild(document.createElement("BR"));
-	}
-	
-	btn = document.createElement("BUTTON");
-	btn.id="buttonRes"+count;
-	btn.setAttribute("type", "submit");
-	btn.setAttribute("class","buttonSubmit");
-	btn.appendChild(document.createTextNode("Resultados"));  
+		btn = document.createElement("BUTTON");
+		btn.id="buttonRes"+count;
+		btn.setAttribute("type", "submit");
+		btn.setAttribute("class","buttonSubmit");
+		btn.appendChild(document.createTextNode("Resultados"));  
 
-	noFac.appendChild(btn);
-	
-	elementDiv.appendChild(noFac);
-	
-	countFac++;
-	
-	addEventButtonResultados();
+		noFac.appendChild(btn);
+		
+		elementDiv.appendChild(noFac);
+		
+		countFac++;
+		
+		addEventButtonResultados();
+	//}
 
 } 
 
@@ -355,23 +452,16 @@ function addEventButtonResultados(){
 			pes.removeChild(pes.firstChild);
 			
 		}	
-		/*resultr=document.createElement("TR");
-		resultd=document.createElement("TD");
-		resultd.appendChild(document.createTextNode("Ola"));
-		resultr.appendChild(resultd);*/
+		
 		var t = document.createElement("TABLE");
 		for(l=0;l<20;l++){
 			r = t.insertRow(l); 
 			for(i=0;i<20;i++){
-			c = r.insertCell(i);
-			c.appendChild(document.createTextNode("Ola"));
+				c = r.insertCell(i);
+				c.appendChild(document.createTextNode("Ola"));
+			}
 		}
-		}
-		
-		
-		
-		
-		//x.appendChild(resultr);
+
 		pes.appendChild(t);
 		pes.style.display = "block";
 		

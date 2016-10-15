@@ -104,6 +104,11 @@ th {
 	overflow: scroll;
 	max-height: 200px;
 }
+.checkboxValores{
+	padding: 20px;
+
+}
+
 div{
 
 	width: 350px;
