@@ -17,8 +17,7 @@ background-color: white;
 button{
 border:none;
 background-color: white;
-position:relative;
-left:550px;
+
 }
 .rotateimg180 {
 	-webkit-transform:rotate(180deg);
@@ -44,8 +43,7 @@ ul.tab {
 	width: auto;
     height: auto;
     overflow: auto;
-	position:relative;
-	left:450px;
+
     
     background-color: #f1f1f1;
 }
@@ -96,7 +94,7 @@ ul.tab li a:focus, .active {background-color: #ccc;}
 	width:100px;
 	height:30px;
 	position:relative;
-    left:120px;
+    left:20px;
 }
 
 table {
@@ -117,8 +115,6 @@ th {
 }
 
 .divResultados{
-	position:relative;
-	left:450px;
 	width:350px;
 	overflow: auto;
 	max-height: 200px;
@@ -128,8 +124,6 @@ th {
 
 }
 .divPesquisa{
-position:relative;
-	left:450px;
 	width: 350px;
 	height: auto;
 	overflow: auto;
