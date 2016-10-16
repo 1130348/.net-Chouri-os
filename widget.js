@@ -388,19 +388,6 @@ switch(nomeSensor){
 	case "3":
 		nomeSensor="Atividade_cardiaca";
 		break;
-<<<<<<< HEAD
-}*/
-
-if(nomeSensor.toUpperCase == "Temperatura".toUpperCase){
-	nomeSensor="Temperatura";
-}else if(nomeSensor.toUpperCase == "Qualidade_do_ar".toUpperCase){
-	nomeSensor="Qualidade_do_ar";
-}else if(nomeSensor.toUpperCase == "Fluxo_de_transito".toUpperCase){
-	nomeSensor="Fluxo_de_transito";
-}else if(nomeSensor.toUpperCase == "Atividade_cardiaca".toUpperCase){
-	nomeSensor="Atividade_cardiaca";
-=======
->>>>>>> 0e8a70a27f97df1fea6fa69aec9cef79e9c09465
 }
 
 	
