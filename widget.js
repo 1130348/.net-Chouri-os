@@ -371,6 +371,7 @@ switch(nomeSensor){
 		nomeSensor="Atividade_cardiaca";
 		break;
 }*/
+
 if(nomeSensor.toUpperCase == "Temperatura".toUpperCase){
 	nomeSensor="Temperatura";
 }else if(nomeSensor.toUpperCase == "Qualidade_do_ar".toUpperCase){
