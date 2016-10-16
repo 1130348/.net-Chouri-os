@@ -10,6 +10,10 @@ function myFunction() {
 		img.setAttribute("class", "rotateimg0");
 	
 		myCon.style.display = "none";
+		pes=document.getElementById("resultados");
+		while (pes.firstChild) {
+			pes.removeChild(pes.firstChild);
+		}	
 	}else{
 		
 		img.setAttribute("class", "rotateimg180");
@@ -26,6 +30,9 @@ function openSensor(evt, sensorId) {
 	while (pes.firstChild) {
 		pes.removeChild(pes.firstChild);
 	}	
+
+	
+
 	pes.style.display="none";
 
     var i, tabcontent, tablinks;
@@ -828,6 +835,20 @@ function addEventButtonResultados(){
 				pes.removeChild(pes.firstChild);
 				
 			}
+			
+			var pesquisadatas="";
+			var pesquisahoras="";
+			var pesquisatemp="";
+			var pesquisalocal="";
+			var pesquisalongitude="";
+			var pesquisalatitude="";
+			var pesquisapreco="";
+			var pesquisafonte="";
+			var pesquisavalor="";
+			var pesquisafoto="";
+			var pesquisaindicador="";
+			var pesquisagps="";
+			
 			url="http://phpdev2.dei.isep.ipp.pt/~arqsi/smartcity/valoresDeSensor.php?sensor="+numSensor;	
 		}else{
 			for(i=0;i<d.length;i++){
@@ -887,18 +908,20 @@ function addEventButtonResultados(){
 						if(ltemp[g].checked){
 							if(ltemp[g].nextSibling.nodeValue.includes("ã")){
 								pesquisalocal=pesquisalocal+","+ltemp[g].nextSibling.nodeValue.replace("ã","a");
+							}else if(ltemp[g].nextSibling.nodeValue.includes("á")){
+								pesquisalocal=pesquisalocal+","+ltemp[g].nextSibling.nodeValue.replace("á","a");
 							}else{
-							pesquisalocal=pesquisalocal+","+ltemp[g].nextSibling.nodeValue;
+								pesquisalocal=pesquisalocal+","+ltemp[g].nextSibling.nodeValue;
 							}
 						}
 					}
 					
 					pesquisalocal=pesquisalocal.replace(",","");
-					while(pesquisalocal.includes(" ")){
-						pesquisalocal=pesquisalocal.replace(" ","");
-					}
+					
+					pesquisalocal=pesquisalocal.replace(" ","");
+				
 					pesquisalocal=pesquisalocal+"]";
-					console.log(pesquisalocal);
+					
 					
 					
 				}
@@ -917,7 +940,7 @@ function addEventButtonResultados(){
 				
 				}
 				nom=d[i].id.replace("checkbox","");
-				console.log(nom);
+				
 				if(nom.replace("div","")=="GPS"){
 					gp=d[i].children[1].value;
 				
