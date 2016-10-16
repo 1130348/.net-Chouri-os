@@ -251,9 +251,73 @@ function adicionaDiv(diva,checkbox){
 	checkbox.parentElement.insertBefore(diva,child);
 	
 }
+function getMaximo(url,da){
+	
+xmlHttpObj = new XMLHttpRequest();
+if (xmlHttpObj) {
+	
+	xmlHttpObj.onreadystatechange  = function() {
+		if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
+			
+			var options = xmlHttpObj.responseText;
+	
+			options=options.replace("}","");
+			options=options.replace("}","");
+			while(options.includes("\"")){
+				options=options.replace("\"","");
+			}
+			
+			var partsOfStr = options.split(':');
+			max=partsOfStr[1];
+	
+			da.setAttribute("max", max);
+
+
+			
+		}
+	};
+	xmlHttpObj.open("GET",url, false);
+	xmlHttpObj.send(null);
+	
+}
+	
+}
+
+function getMinimo(url,da){
+	
+xmlHttpObj = new XMLHttpRequest();
+if (xmlHttpObj) {
+	
+	xmlHttpObj.onreadystatechange  = function() {
+		if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
+			
+			var options = xmlHttpObj.responseText;
+		
+			options=options.replace("}","");
+			options=options.replace("}","");
+			while(options.includes("\"")){
+				options=options.replace("\"","");
+			}
+			
+			var partsOfStr = options.split(':');
+			max=partsOfStr[1];
+			da.setAttribute("min", max);
+
+
+			
+		}
+	};
+	xmlHttpObj.open("GET",url, false);
+	xmlHttpObj.send(null);
+	
+}
+	
+}
+
+
 function getOpcoesMinMax(checkbox){
 	
-	var nomeFaceta=checkbox.id.replace("checkbox","");
+var nomeFaceta=checkbox.id.replace("checkbox","");
 var nomeSensor=checkbox.parentElement.id.replace("faceta","");
 
 switch(nomeSensor){
@@ -274,74 +338,28 @@ switch(nomeSensor){
 var max=0;
 var min=0;
 var url="http://phpdev2.dei.isep.ipp.pt/~arqsi/smartcity/maxFaceta.php?sensor="+nomeSensor+"&facetaCont="+nomeFaceta;
-		
+
+diva=document.createElement("DIV");
+diva.id="div"+nomeFaceta;
+diva.className="intoPesquisa";
+
 da=document.createElement("INPUT");
 da.setAttribute("type", "range");
+
+getMaximo(url,da);
 	
 		
-xmlHttpObj = new XMLHttpRequest();
-if (xmlHttpObj) {
-	
-	console.log("oi");
-	xmlHttpObj.onreadystatechange  = function() {
-		if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
-			
-			var options = xmlHttpObj.responseText;
-			console.log("sad"+options);
-			options=options.replace("}","");
-			options=options.replace("}","");
-			while(options.includes("\"")){
-				options=options.replace("\"","");
-			}
-			
-			var partsOfStr = options.split(':');
-			max=partsOfStr[1];
-			console.log("ola"+max);
-			da.setAttribute("max", max);
 
-
-			
-		}
-	};
-	xmlHttpObj.open("GET",url, true);
-	xmlHttpObj.send(null);
-	
-}
 
 var url="http://phpdev2.dei.isep.ipp.pt/~arqsi/smartcity/minFaceta.php?sensor="+nomeSensor+"&facetaCont="+nomeFaceta;
 		
-xmlHttpObj = new XMLHttpRequest();
-if (xmlHttpObj) {
-	
-	
-	xmlHttpObj.onreadystatechange  = function() {
-		if (xmlHttpObj.readyState == 4 && xmlHttpObj.status == 200) {
-			
-			var options = xmlHttpObj.responseText;
-		
-			options=options.replace("}","");
-			options=options.replace("}","");
-			while(options.includes("\"")){
-				options=options.replace("\"","");
-			}
-			
-			var partsOfStr = options.split(':');
-			min=partsOfStr[1];
-			console.log(min+"oi");
-			da.setAttribute("min", min);
-			
-		}
-	};
-	xmlHttpObj.open("GET",url, true);
-	xmlHttpObj.send(null);
-	
-}
+getMinimo(url,da);
 
-diva=document.createElement("DIV");
-diva.name="div";
 
 diva.appendChild(document.createElement("BR"));
-diva.appendChild(document.createTextNode(da));
+diva.appendChild(document.createTextNode("Min: "+da.min+" "));
+diva.appendChild(da);
+diva.appendChild(document.createTextNode(" Max: "+da.max));
 
 
 
@@ -356,7 +374,7 @@ function getOpcoesFaceta(checkbox){
 var nomeFaceta=checkbox.id.replace("checkbox","");
 var nomeSensor=checkbox.parentElement.id.replace("faceta","");
 
-/*
+
 switch(nomeSensor){
 	case "0":
 		nomeSensor="Temperatura";
@@ -370,16 +388,8 @@ switch(nomeSensor){
 	case "3":
 		nomeSensor="Atividade_cardiaca";
 		break;
-}*/
-if(nomeSensor.toUpperCase == "Temperatura".toUpperCase){
-	nomeSensor="Temperatura";
-}else if(nomeSensor.toUpperCase == "Qualidade_do_ar".toUpperCase){
-	nomeSensor="Qualidade_do_ar";
-}else if(nomeSensor.toUpperCase == "Fluxo_de_transito".toUpperCase){
-	nomeSensor="Fluxo_de_transito";
-}else if(nomeSensor.toUpperCase == "Atividade_cardiaca".toUpperCase){
-	nomeSensor="Atividade_cardiaca";
 }
+
 	
 var url="http://phpdev2.dei.isep.ipp.pt/~arqsi/smartcity/valoresFacetadoSensor.php?sensor="+nomeSensor+"&faceta="+nomeFaceta;
 		
@@ -402,7 +412,7 @@ var url="http://phpdev2.dei.isep.ipp.pt/~arqsi/smartcity/valoresFacetadoSensor.p
 				
 				
 				diva=document.createElement("DIV");
-				diva.name="div";
+				diva.id="div"+nomeFaceta;
 				diva.className="intoPesquisa";
 				
 				for(y=0;y<partsOfStr.length;y++){
@@ -446,7 +456,7 @@ function OnChangeCheckbox () {
 			
 			
 			diva=document.createElement("DIV");
-			diva.name="div";
+			diva.id="divData";
 			diva.className="intoPesquisa";
 			da=document.createElement("INPUT");
 			da.type="date";
@@ -469,7 +479,7 @@ function OnChangeCheckbox () {
 		if(checkbox.id.indexOf("Hora")!=-1){
 			
 			diva=document.createElement("DIV");
-			diva.name="div";
+			diva.id="divHora";
 			diva.className="intoPesquisa";
 			
 			diva.appendChild(document.createElement("BR"));
@@ -564,7 +574,7 @@ function OnChangeCheckbox () {
 		if(checkbox.id.indexOf("Temp")!=-1){
 				
 			diva=document.createElement("DIV");
-			diva.name="div";
+			diva.id="divTemp";
 			diva.className="intoPesquisa";
 			
 			textBox=document.createElement("INPUT");
@@ -582,7 +592,7 @@ function OnChangeCheckbox () {
 		}
 		if(checkbox.id.indexOf("Latitude")!=-1){
 			diva=document.createElement("DIV");
-			diva.name="div";
+			diva.id="divLatitude";
 			diva.className="intoPesquisa";
 			
 			textBox=document.createElement("INPUT");
@@ -594,7 +604,7 @@ function OnChangeCheckbox () {
 		}
 		if(checkbox.id.indexOf("Longitude")!=-1){
 			diva=document.createElement("DIV");
-			diva.name="div";
+			diva.id="divLongitude";
 			diva.className="intoPesquisa";
 			
 			textBox=document.createElement("INPUT");
@@ -609,7 +619,7 @@ function OnChangeCheckbox () {
 		if(nom=="GPS"){
 			
 			diva=document.createElement("DIV");
-			diva.name="div";
+			diva.id="divGPS";
 			diva.className="intoPesquisa";
 			
 			diva.appendChild(document.createElement("BR"));
@@ -630,7 +640,7 @@ function OnChangeCheckbox () {
 		}
 		if(checkbox.id.indexOf("Preço")!=-1){
 			diva=document.createElement("DIV");
-			diva.name="div";
+			diva.id="divPreco";
 			diva.className="intoPesquisa";
 			
 			diva.appendChild(document.createElement("BR"));
@@ -662,61 +672,66 @@ function OnChangeCheckbox () {
 	else {
 		listChildren=checkbox.parentElement.children;
 
-		for(i=0;i<listChildren.length;i++){
+		//for(i=0;i<listChildren.length;i++){
 			
-			if(listChildren[i].name=="div"){
+			/*if(listChildren[i].name=="div"){
 				
 				divR=listChildren[i];
 				checkbox.parentElement.removeChild(divR);
-			}
+			}*/
 			
 			if(checkbox.id.indexOf("Data")!=-1){
 			
-			
-				
-				
+				checkbox.parentElement.removeChild(document.getElementById("divData"));
 				
 			}
 			if(checkbox.id.indexOf("Hora")!=-1){
-		
+			
+				checkbox.parentElement.removeChild(document.getElementById("divHora"));
 				
 			}
 			if(checkbox.id.indexOf("Temp")!=-1){
 					
+				checkbox.parentElement.removeChild(document.getElementById("divTemp"));
 			
 			}
 			if(checkbox.id.indexOf("Local")!=-1){
 				
 		
-			
+				checkbox.parentElement.removeChild(document.getElementById("divLocal"));
 				
 			}
 			if(checkbox.id.indexOf("Latitude")!=-1){
 				
+				checkbox.parentElement.removeChild(document.getElementById("divLatitude"));
+				
 			}
 			if(checkbox.id.indexOf("Longitude")!=-1){
+				
+				checkbox.parentElement.removeChild(document.getElementById("divLongitude"));
 			
 			}
-			if(checkbox.id.indexOf("GPS")!=-1){
-				//console.log("GPS");
+			nom=checkbox.id.replace("checkbox","");
+			if(nom=="GPS"){
+				checkbox.parentElement.removeChild(document.getElementById("divGPS"));
 			}
-			if(checkbox.id.indexOf("Preco")!=-1){
-				console.log("Preco");
+			if(checkbox.id.indexOf("Preço")!=-1){
+				checkbox.parentElement.removeChild(document.getElementById("divPreco"));
 			}
 			if(checkbox.id.indexOf("Fonte")!=-1){
-				console.log("Fonte");
+				checkbox.parentElement.removeChild(document.getElementById("divFonte"));
 			}
 			if(checkbox.id.indexOf("Valor")!=-1){
-				console.log("Valor");
+				checkbox.parentElement.removeChild(document.getElementById("divValor"));
 			}
 			if(checkbox.id.indexOf("Foto")!=-1){
-				console.log("Foto");
+				checkbox.parentElement.removeChild(document.getElementById("divFoto"));
 			}
 			if(checkbox.id.indexOf("Indicador")!=-1){
-				console.log("Indicador");
+				checkbox.parentElement.removeChild(document.getElementById("divIndicador"));
 			}
 			
-		}
+		//}
 
 			
 		
@@ -763,7 +778,7 @@ function preencheValoresFaceta(valoresFaceta){
 		btn.setAttribute("type", "submit");
 		btn.setAttribute("class","buttonSubmit");
 		btn.appendChild(document.createTextNode("Resultados"));  
-
+		noFac.appendChild(document.createElement("BR"));
 		noFac.appendChild(btn);
 		
 		elementDiv.appendChild(noFac);
@@ -779,6 +794,8 @@ function addEventButtonResultados(){
 	var c,r,t,pesquisa;
 	var btn=document.getElementById("buttonRes"+count);
 	btn.addEventListener("click", function(e) {
+		
+	pesquisa="";
 		
 	var facetas=document.getElementsByClassName("tabcontent");
 	
@@ -796,6 +813,8 @@ function addEventButtonResultados(){
 				}
 			}
 		}
+		
+		console.log(pesquisa);
 		
 		
 		pes=document.getElementById("resultados");
