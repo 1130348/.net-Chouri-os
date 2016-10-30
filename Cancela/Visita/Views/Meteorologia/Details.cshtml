@@ -1,0 +1,90 @@
+﻿@model Visita.Models.Meteorologia
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Meteorologia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Data_de_leitura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data_de_leitura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hora_de_leitura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hora_de_leitura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.temp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.temp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.humidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.humidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pressao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pressao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NO2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NO2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CO2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CO2)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
