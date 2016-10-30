@@ -1,0 +1,114 @@
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\ApplicationInsights.config
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\roslyn\csc.exe
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\roslyn\vbc.exe
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\roslyn\VBCSCompiler.exe
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Lugares.dll.config
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Lugares.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Lugares.pdb
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Antlr3.Runtime.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\EntityFramework.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\EntityFramework.SqlServer.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Microsoft.AI.Web.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Microsoft.ApplicationInsights.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Newtonsoft.Json.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\System.Web.Helpers.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\System.Web.Mvc.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\System.Web.Optimization.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\System.Web.Razor.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\System.Web.WebPages.Deployment.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\System.Web.WebPages.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\System.Web.WebPages.Razor.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\WebGrease.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\EntityFramework.xml
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\EntityFramework.SqlServer.xml
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Microsoft.AI.Web.xml
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Microsoft.ApplicationInsights.xml
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\System.Web.Helpers.xml
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\System.Web.Mvc.xml
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\System.Web.Optimization.xml
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\System.Web.Razor.xml
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\System.Web.WebPages.xml
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\System.Web.WebPages.Deployment.xml
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\System.Web.WebPages.Razor.xml
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Antlr3.Runtime.pdb
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\bin\Newtonsoft.Json.xml
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\obj\Debug\Lugares.csprojResolveAssemblyReference.cache
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\obj\Debug\Lugares.dll
+C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Lugares\Lugares\obj\Debug\Lugares.pdb
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\ApplicationInsights.config
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\roslyn\csc.exe
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\roslyn\vbc.exe
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\roslyn\VBCSCompiler.exe
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Lugares.dll.config
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Lugares.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Lugares.pdb
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Antlr3.Runtime.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\EntityFramework.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\EntityFramework.SqlServer.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Microsoft.AI.Web.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Microsoft.ApplicationInsights.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Newtonsoft.Json.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\System.Web.Helpers.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\System.Web.Mvc.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\System.Web.Optimization.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\System.Web.Razor.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\System.Web.WebPages.Deployment.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\System.Web.WebPages.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\System.Web.WebPages.Razor.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\WebGrease.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\EntityFramework.xml
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\EntityFramework.SqlServer.xml
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Microsoft.AI.Web.xml
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Microsoft.ApplicationInsights.xml
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\System.Web.Helpers.xml
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\System.Web.Mvc.xml
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\System.Web.Optimization.xml
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\System.Web.Razor.xml
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\System.Web.WebPages.xml
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\System.Web.WebPages.Deployment.xml
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\System.Web.WebPages.Razor.xml
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Antlr3.Runtime.pdb
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\bin\Newtonsoft.Json.xml
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\obj\Debug\Lugares.csprojResolveAssemblyReference.cache
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\obj\Debug\Lugares.dll
+C:\Users\renat\Desktop\arqsiIteracao1\Lugares\Lugares\obj\Debug\Lugares.pdb
