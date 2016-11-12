@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lugares", "Lugares\Lugares.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelLibrary", "ModelLibrary\ModelLibrary.csproj", "{2414E3FB-6977-4F33-AE69-4704D1D2B7D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cancela", "Cancela\Cancela.csproj", "{F42D8A2F-B376-4268-8C78-0E6D4BF0D399}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2414E3FB-6977-4F33-AE69-4704D1D2B7D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2414E3FB-6977-4F33-AE69-4704D1D2B7D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2414E3FB-6977-4F33-AE69-4704D1D2B7D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F42D8A2F-B376-4268-8C78-0E6D4BF0D399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F42D8A2F-B376-4268-8C78-0E6D4BF0D399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F42D8A2F-B376-4268-8C78-0E6D4BF0D399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F42D8A2F-B376-4268-8C78-0E6D4BF0D399}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
