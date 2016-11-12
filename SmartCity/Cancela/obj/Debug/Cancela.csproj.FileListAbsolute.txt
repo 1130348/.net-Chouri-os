@@ -17,6 +17,7 @@ C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\Cancela.pdb
 C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\Antlr3.Runtime.dll
 C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\EntityFramework.dll
 C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\EntityFramework.SqlServer.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\Lugares.dll
 C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\Microsoft.AI.DependencyCollector.dll
 C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -53,6 +54,8 @@ C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\System.Web.WebPages.Deplo
 C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\System.Web.WebPages.dll
 C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\System.Web.WebPages.Razor.dll
 C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\WebGrease.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\PagedList.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\Lugares.pdb
 C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\Microsoft.AI.DependencyCollector.xml
 C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\Microsoft.AI.Web.xml
@@ -87,10 +90,7 @@ C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\Microsoft.Owin.Security.G
 C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\System.Web.Http.Owin.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\PagedList.xml
 C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\obj\Debug\Cancela.csprojResolveAssemblyReference.cache
 C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\obj\Debug\Cancela.dll
 C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\obj\Debug\Cancela.pdb
-C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\Lugares.dll
-C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\PagedList.dll
-C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\Lugares.pdb
-C:\Users\renat\Desktop\ITERACAO2\SmartCity\Cancela\bin\PagedList.xml
