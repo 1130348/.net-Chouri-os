@@ -169,6 +169,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LocalController.cs" />
+    <Compile Include="Controllers\MeteorologiaController.cs" />
+    <Compile Include="Controllers\POIController.cs" />
     <Compile Include="DAL\DatumInitializer.cs" />
     <Compile Include="DAL\Datum.cs" />
     <Compile Include="Global.asax.cs">
@@ -226,6 +228,16 @@
     <Content Include="Views\Local\Details.cshtml" />
     <Content Include="Views\Local\Edit.cshtml" />
     <Content Include="Views\Local\Index.cshtml" />
+    <Content Include="Views\Meteorologia\Create.cshtml" />
+    <Content Include="Views\Meteorologia\Delete.cshtml" />
+    <Content Include="Views\Meteorologia\Details.cshtml" />
+    <Content Include="Views\Meteorologia\Edit.cshtml" />
+    <Content Include="Views\Meteorologia\Index.cshtml" />
+    <Content Include="Views\POI\Create.cshtml" />
+    <Content Include="Views\POI\Delete.cshtml" />
+    <Content Include="Views\POI\Details.cshtml" />
+    <Content Include="Views\POI\Edit.cshtml" />
+    <Content Include="Views\POI\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

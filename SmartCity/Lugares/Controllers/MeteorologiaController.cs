@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
@@ -9,15 +10,15 @@ using ModelLibrary.Models;
 
 namespace Lugares.Controllers
 {
-    public class LocalController : Controller
+    public class MeteorologiaController : Controller
     {
         private Datum db = new Datum();
 
-        // GET: Local
+        // GET: Meteorologia
         public ActionResult Index(string sortOrder, string currentFiltrer, string searchString, int? page)
         {
             ViewBag.CurrentSort = sortOrder;
-            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.DateSortParm = sortOrder == "Date" ? "date_desc" : "";
 
             if (searchString != null)
             {
@@ -30,64 +31,68 @@ namespace Lugares.Controllers
 
             ViewBag.CurrentFilter = searchString;
 
-            var locais = from l in db.Locais
-                         select l;
+            var registosMeteorologicos = from m in db.RegistosMeteorologicos
+                                         select m;
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                locais = locais.Where(l => l.NomeLocal.Contains(searchString));
+                registosMeteorologicos = registosMeteorologicos.Where(m => m.Local.NomeLocal.Contains(searchString));
             }
 
             switch (sortOrder)
             {
-                case "name_desc":
-                    locais = locais.OrderByDescending(l => l.NomeLocal);
+                case "date_desc":
+                    registosMeteorologicos = registosMeteorologicos.OrderByDescending(m => m.DataDeLeitura);
                     break;
                 default:
-                    locais = locais.OrderBy(l => l.NomeLocal);
+                    registosMeteorologicos = registosMeteorologicos.OrderBy(m => m.DataDeLeitura);
                     break;
             }
-            int pageSize = 5; 
+
+            int pageSize = 5; // Quantidade de locais por página.
             int pageNumber = (page ?? 1);
-            return View(locais.ToPagedList(pageNumber, pageSize));
+            return View(registosMeteorologicos.ToPagedList(pageNumber, pageSize));
         }
 
-        // GET: Local/Details/5
+        // GET: Meteorologia/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Local local = db.Locais.Find(id);
-            if (local == null)
+            Meteorologia meteorologia = db.RegistosMeteorologicos.Find(id);
+            if (meteorologia == null)
             {
                 return HttpNotFound();
             }
-            return View(local);
+            return View(meteorologia);
         }
 
-        // GET: Local/Create
+        // GET: Meteorologia/Create
         public ActionResult Create()
         {
+            ViewBag.LocalID = new SelectList(db.Locais, "LocalID", "NomeLocal");
             return View();
         }
 
-        // POST: Local/Create
+        // POST: Meteorologia/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "GPS_Lat,GPS_Long,NomeLocal")] Local local)
+        public ActionResult Create([Bind(Include = "LocalID,DataDeLeitura,HoraDeLeitura,Temperatura,Vento,Humidade,Pressao,NO,NO2,CO2")] Meteorologia meteorologia)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    db.Locais.Add(local);
+                    db.RegistosMeteorologicos.Add(meteorologia);
                     db.SaveChanges();
                     return RedirectToAction("Index");
                 }
+
+                ViewBag.LocalID = new SelectList(db.Locais, "LocalID", "NomeLocal", meteorologia.LocalID);
             }
             catch (DataException /* dex */)
             {
@@ -95,71 +100,43 @@ namespace Lugares.Controllers
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
             }
 
-
-            return View(local);
+            return View(meteorologia);
         }
 
-        // GET: Local/Edit/5
+        // GET: Meteorologia/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Local local = db.Locais.Find(id);
-            if (local == null)
+            Meteorologia meteorologia = db.RegistosMeteorologicos.Find(id);
+            if (meteorologia == null)
             {
                 return HttpNotFound();
             }
-            return View(local);
+            ViewBag.LocalID = new SelectList(db.Locais, "LocalID", "NomeLocal", meteorologia.LocalID);
+            return View(meteorologia);
         }
 
-
-        // POST: Local/Edit/5
+        // POST: Meteorologia/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        /*[HttpPost]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "LocalID,GPS_Lat,GPS_Long,NomeLocal")] Local local)
+        public ActionResult Edit([Bind(Include = "MeteorologiaID,LocalID,DataDeLeitura,HoraDeLeitura,Temperatura,Vento,Humidade,Pressao,NO,NO2,CO2")] Meteorologia meteorologia)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(local).State = EntityState.Modified;
+                db.Entry(meteorologia).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(local);
-        }*/
-
-        // Método Edit a prevenir overposting.
-        [HttpPost, ActionName("Edit")]
-        [ValidateAntiForgeryToken]
-        public ActionResult EditPost(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            var localToUpdate = db.Locais.Find(id);
-            if (TryUpdateModel(localToUpdate, "",
-               new string[] { "GPS_Lat", "GPS_Long", "NomeLocal" }))
-            {
-                try
-                {
-                    db.SaveChanges();
-
-                    return RedirectToAction("Index");
-                }
-                catch (DataException /* dex */)
-                {
-                    //Log the error (uncomment dex variable name and add a line here to write a log.
-                    ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists, see your system administrator.");
-                }
-            }
-            return View(localToUpdate);
+            ViewBag.LocalID = new SelectList(db.Locais, "LocalID", "NomeLocal", meteorologia.LocalID);
+            return View(meteorologia);
         }
 
-        // GET: Local/Delete/5
+        // GET: Meteorologia/Delete/5
         public ActionResult Delete(int? id, bool? saveChangesError = false)
         {
             if (id == null)
@@ -172,23 +149,23 @@ namespace Lugares.Controllers
                 ViewBag.ErrorMessage = "Delete failed. Try again, and if the problem persists see your system administrator.";
             }
 
-            Local local = db.Locais.Find(id);
-            if (local == null)
+            Meteorologia meteorologia = db.RegistosMeteorologicos.Find(id);
+            if (meteorologia == null)
             {
                 return HttpNotFound();
             }
-            return View(local);
+            return View(meteorologia);
         }
 
-        // POST: Local/Delete/5
+        // POST: Meteorologia/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id)
         {
             try
             {
-                Local local = db.Locais.Find(id);
-                db.Locais.Remove(local);
+                Meteorologia meteorologia = db.RegistosMeteorologicos.Find(id);
+                db.RegistosMeteorologicos.Remove(meteorologia);
                 db.SaveChanges();
             }
             catch (DataException/* dex */)

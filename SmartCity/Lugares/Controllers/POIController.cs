@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
@@ -9,15 +10,17 @@ using ModelLibrary.Models;
 
 namespace Lugares.Controllers
 {
-    public class LocalController : Controller
+    public class POIController : Controller
     {
         private Datum db = new Datum();
 
-        // GET: Local
+        // GET: POI
         public ActionResult Index(string sortOrder, string currentFiltrer, string searchString, int? page)
         {
-            ViewBag.CurrentSort = sortOrder;
-            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "nome_ponto_desc" : "";
+            ViewBag.LocalSortParm = String.IsNullOrEmpty(sortOrder) ? "nome_local_desc" : "nome_local_asc";
+            ViewBag.DescricaoSortParm = String.IsNullOrEmpty(sortOrder) ? "descricao_ponto_desc" : "descricao_ponto_asc";
 
             if (searchString != null)
             {
@@ -30,64 +33,80 @@ namespace Lugares.Controllers
 
             ViewBag.CurrentFilter = searchString;
 
-            var locais = from l in db.Locais
-                         select l;
+            var pontos = from p in db.PontosDeInteresse
+                         select p;
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                locais = locais.Where(l => l.NomeLocal.Contains(searchString));
+                pontos = pontos.Where(p => p.Local.NomeLocal.Contains(searchString));
             }
 
             switch (sortOrder)
             {
-                case "name_desc":
-                    locais = locais.OrderByDescending(l => l.NomeLocal);
+                case "nome_ponto_desc":
+                    pontos = pontos.OrderByDescending(p => p.NomePonto);
+                    break;
+                case "nome_local_desc":
+                    pontos = pontos.OrderByDescending(p => p.Local.NomeLocal);
+                    break;
+                case "nome_local_asc":
+                    pontos = pontos.OrderBy(p => p.Local.NomeLocal);
+                    break;
+                case "descricao_ponto_desc":
+                    pontos = pontos.OrderByDescending(p => p.DescricaoPonto);
+                    break;
+                case "descricao_ponto_asc":
+                    pontos = pontos.OrderBy(p => p.DescricaoPonto);
                     break;
                 default:
-                    locais = locais.OrderBy(l => l.NomeLocal);
+                    pontos = pontos.OrderBy(p => p.NomePonto);
                     break;
             }
-            int pageSize = 5; 
+
+            int pageSize = 5; // Quantidade de locais por página.
             int pageNumber = (page ?? 1);
-            return View(locais.ToPagedList(pageNumber, pageSize));
+            return View(pontos.ToPagedList(pageNumber, pageSize));
         }
 
-        // GET: Local/Details/5
+        // GET: POI/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Local local = db.Locais.Find(id);
-            if (local == null)
+            POI pOI = db.PontosDeInteresse.Find(id);
+            if (pOI == null)
             {
                 return HttpNotFound();
             }
-            return View(local);
+            return View(pOI);
         }
 
-        // GET: Local/Create
+        // GET: POI/Create
         public ActionResult Create()
         {
+            ViewBag.LocalID = new SelectList(db.Locais, "LocalID", "NomeLocal");
             return View();
         }
 
-        // POST: Local/Create
+        // POST: POI/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "GPS_Lat,GPS_Long,NomeLocal")] Local local)
+        public ActionResult Create([Bind(Include = "LocalID,NomePonto,DescricaoPonto")] POI pOI)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    db.Locais.Add(local);
+                    db.PontosDeInteresse.Add(pOI);
                     db.SaveChanges();
                     return RedirectToAction("Index");
                 }
+
+                ViewBag.LocalID = new SelectList(db.Locais, "LocalID", "NomeLocal", pOI.LocalID);
             }
             catch (DataException /* dex */)
             {
@@ -95,71 +114,43 @@ namespace Lugares.Controllers
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
             }
 
-
-            return View(local);
+            return View(pOI);
         }
 
-        // GET: Local/Edit/5
+        // GET: POI/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Local local = db.Locais.Find(id);
-            if (local == null)
+            POI pOI = db.PontosDeInteresse.Find(id);
+            if (pOI == null)
             {
                 return HttpNotFound();
             }
-            return View(local);
+            ViewBag.LocalID = new SelectList(db.Locais, "LocalID", "NomeLocal", pOI.LocalID);
+            return View(pOI);
         }
 
-
-        // POST: Local/Edit/5
+        // POST: POI/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        /*[HttpPost]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "LocalID,GPS_Lat,GPS_Long,NomeLocal")] Local local)
+        public ActionResult Edit([Bind(Include = "ID,LocalID,NomePonto,DescricaoPonto")] POI pOI)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(local).State = EntityState.Modified;
+                db.Entry(pOI).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(local);
-        }*/
-
-        // Método Edit a prevenir overposting.
-        [HttpPost, ActionName("Edit")]
-        [ValidateAntiForgeryToken]
-        public ActionResult EditPost(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            var localToUpdate = db.Locais.Find(id);
-            if (TryUpdateModel(localToUpdate, "",
-               new string[] { "GPS_Lat", "GPS_Long", "NomeLocal" }))
-            {
-                try
-                {
-                    db.SaveChanges();
-
-                    return RedirectToAction("Index");
-                }
-                catch (DataException /* dex */)
-                {
-                    //Log the error (uncomment dex variable name and add a line here to write a log.
-                    ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists, see your system administrator.");
-                }
-            }
-            return View(localToUpdate);
+            ViewBag.LocalID = new SelectList(db.Locais, "LocalID", "NomeLocal", pOI.LocalID);
+            return View(pOI);
         }
 
-        // GET: Local/Delete/5
+        // GET: POI/Delete/5
         public ActionResult Delete(int? id, bool? saveChangesError = false)
         {
             if (id == null)
@@ -171,24 +162,23 @@ namespace Lugares.Controllers
             {
                 ViewBag.ErrorMessage = "Delete failed. Try again, and if the problem persists see your system administrator.";
             }
-
-            Local local = db.Locais.Find(id);
-            if (local == null)
+            POI pOI = db.PontosDeInteresse.Find(id);
+            if (pOI == null)
             {
                 return HttpNotFound();
             }
-            return View(local);
+            return View(pOI);
         }
 
-        // POST: Local/Delete/5
+        // POST: POI/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id)
         {
             try
             {
-                Local local = db.Locais.Find(id);
-                db.Locais.Remove(local);
+                POI ponto = db.PontosDeInteresse.Find(id);
+                db.PontosDeInteresse.Remove(ponto);
                 db.SaveChanges();
             }
             catch (DataException/* dex */)
