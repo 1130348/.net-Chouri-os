@@ -1,4 +1,0 @@
-C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Cancela\ModelLibrary\bin\Debug\ModelLibrary.dll
-C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Cancela\ModelLibrary\bin\Debug\ModelLibrary.pdb
-C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Cancela\ModelLibrary\obj\Debug\ModelLibrary.dll
-C:\Users\renat\OneDrive\Documents\Visual Studio 2015\Projects\Cancela\ModelLibrary\obj\Debug\ModelLibrary.pdb
