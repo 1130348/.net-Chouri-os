@@ -37,7 +37,27 @@ namespace Lugares.DAL
             pontosDeInteresse.ForEach(p => context.PontosDeInteresse.Add(p));
             context.SaveChanges();
 
-     
+
+            var registosMeteorologicos = new List<Meteorologia>
+            {
+                new Meteorologia {LocalID = 1, DataDeLeitura = DateTime.Parse("2016-11-12"), HoraDeLeitura = TimeSpan.Parse("13:00:00"), Temperatura = 10.00f, Vento = 31.00f,
+                Humidade = 4.20f, Pressao = 1.61f, NO = 0.11f, NO2 = 0.32f, CO2 = 0.21f },
+                new Meteorologia {LocalID = 2, DataDeLeitura = DateTime.Parse("2016-11-13"), HoraDeLeitura = TimeSpan.Parse("09:00:00"), Temperatura = 14.00f, Vento = 20.60f,
+                Humidade = 3.40f, Pressao = 1.22f, NO = 0.21f, NO2 = 0.22f, CO2 = 0.01f },
+                new Meteorologia {LocalID = 3, DataDeLeitura = DateTime.Parse("2016-11-14"), HoraDeLeitura = TimeSpan.Parse("15:30:00"), Temperatura = 8.00f, Vento = 19.32f,
+                Humidade = 3.80f, Pressao = 0.55f, NO = 0.12f, NO2 = 0.12f, CO2 = 0.11f },
+                new Meteorologia {LocalID = 4, DataDeLeitura = DateTime.Parse("2016-11-15"), HoraDeLeitura = TimeSpan.Parse("13:00:00"), Temperatura = 19.00f, Vento = 6.50f,
+                Humidade = 5.60f, Pressao = 1.41f, NO = 0.12f, NO2 = 0.34f, CO2 = 0.06f },
+                new Meteorologia {LocalID = 5, DataDeLeitura = DateTime.Parse("2016-11-16"), HoraDeLeitura = TimeSpan.Parse("09:00:00"), Temperatura = 16.00f, Vento = 35.90f,
+                Humidade = 6.50f, Pressao = 0.91f, NO = 0.03f, NO2 = 0.12f, CO2 = 0.52f },
+                new Meteorologia {LocalID = 6, DataDeLeitura = DateTime.Parse("2016-11-17"), HoraDeLeitura = TimeSpan.Parse("09:00:00"), Temperatura = 19.00f, Vento = 5.60f,
+                Humidade = 4.80f, Pressao = 1.34f, NO = 0.09f, NO2 = 0.03f, CO2 = 0.21f}
+            };
+
+            registosMeteorologicos.ForEach(m => context.RegistosMeteorologicos.Add(m));
+            context.SaveChanges();
+
+
         }
     }
 }
