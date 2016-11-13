@@ -1,29 +1,34 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Net;
+using System.Web;
 using System.Web.Mvc;
 using ModelLibrary.Models;
+using Visita.Models;
+using Visita.Helpers;
 using System.Net.Http;
 using Newtonsoft.Json;
-using Visita.Helpers;
-using Visita.Models;
 
 namespace Visita.Controllers
 {
-    public class LocalsController : Controller
+    public class MeteorologiasController : Controller
     {
-        private VisitaContext db = new VisitaContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Locals
+        // GET: Meteorologias
         public async Task<ActionResult> Index()
         {
             var client = WebApiHttpClient.GetClient();
-            HttpResponseMessage response = await client.GetAsync("api/Locals");
+            HttpResponseMessage response = await client.GetAsync("api/Meteorologias");
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                var locais = JsonConvert.DeserializeObject<IEnumerable<Local>>(content);
-                return View(locais);
+                var meteorologias = JsonConvert.DeserializeObject<IEnumerable<Meteorologia>>(content);
+                return View(meteorologias);
             }
             else
             {
@@ -31,7 +36,7 @@ namespace Visita.Controllers
             }
         }
 
-        // GET: Locals/Details/5
+        // GET: Meteorologias/Details/5
         public async Task<ActionResult> Details(int? id)
         {
             if (id == null)
@@ -40,12 +45,12 @@ namespace Visita.Controllers
             }
 
             var client = WebApiHttpClient.GetClient();
-            HttpResponseMessage response = await client.GetAsync("api/Locals/" + id);
+            HttpResponseMessage response = await client.GetAsync("api/Meteorologias/" + id);
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                var local = JsonConvert.DeserializeObject<Local>(content);
-                if (local == null) return HttpNotFound(); return View(local);
+                var meteorologia = JsonConvert.DeserializeObject<Meteorologia>(content);
+                if (meteorologia == null) return HttpNotFound(); return View(meteorologia);
             }
             else
             {
@@ -53,26 +58,26 @@ namespace Visita.Controllers
             }
         }
 
-        // GET: Locals/Create
+        // GET: Meteorologias/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Locals/Create
+        // POST: Meteorologias/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "LocalID,GPS_Lat,GPS_Long,NomeLocal")] Local local)
+        public async Task<ActionResult> Create([Bind(Include = "LocalID,DataDeLeitura,HoraDeLeitura,Temperatura,Vento,Humidade,Pressao,NO,NO2,CO")] Meteorologia meteorologia)
         {
             try
             {
                 var client = WebApiHttpClient.GetClient();
-                string localJSON = JsonConvert.SerializeObject(local);
-                HttpContent content = new StringContent(localJSON,
+                string meteorologiaJSON = JsonConvert.SerializeObject(meteorologia);
+                HttpContent content = new StringContent(meteorologiaJSON,
                     System.Text.Encoding.Unicode, "application/json");
-                var response = await client.PostAsync("api/Locals", content);
+                var response = await client.PostAsync("api/Meteorologias", content);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -89,7 +94,8 @@ namespace Visita.Controllers
             }
         }
 
-        // GET: Locals/Edit/5
+
+        // GET: Meteorologias/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -98,30 +104,30 @@ namespace Visita.Controllers
             }
 
             var client = WebApiHttpClient.GetClient();
-            HttpResponseMessage response = await client.GetAsync("api/Locals/" + id);
+            HttpResponseMessage response = await client.GetAsync("api/Meteorologias/" + id);
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                var local = JsonConvert.DeserializeObject<Local>(content);
-                if (local == null) return HttpNotFound();
-                return View(local);
+                var meteorologia = JsonConvert.DeserializeObject<Meteorologia>(content);
+                if (meteorologia == null) return HttpNotFound();
+                return View(meteorologia);
             }
             return Content("Ocorreu um erro: " + response.StatusCode);
         }
 
-        // POST: Locals/Edit/5
+        // POST: Meteorologias/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "LocalID,GPS_Lat,GPS_Long,NomeLocal")] Local local)
+        public async Task<ActionResult> Edit([Bind(Include = "LocalID,DataDeLeitura,HoraDeLeitura,Temperatura,Vento,Humidade,Pressao,NO,NO2,CO")] Meteorologia meteorologia)
         {
             try
             {
                 var client = WebApiHttpClient.GetClient();
-                string localJSON = JsonConvert.SerializeObject(local);
+                string localJSON = JsonConvert.SerializeObject(meteorologia);
                 HttpContent content = new StringContent(localJSON, System.Text.Encoding.Unicode, "application/json");
-                var response = await client.PutAsync("api/Locals/" + local.LocalID, content);
+                var response = await client.PutAsync("api/Meteorologias/" + meteorologia.MeteorologiaID, content);
                 if (response.IsSuccessStatusCode)
                 {
                     return RedirectToAction("Index");
@@ -137,7 +143,7 @@ namespace Visita.Controllers
             }
         }
 
-        // GET: Locals/Delete/5
+        // GET: Meteorologias/Delete/5
         public async Task<ActionResult> Delete(int? id)
         {
             if (id == null)
@@ -146,18 +152,18 @@ namespace Visita.Controllers
             }
 
             var client = WebApiHttpClient.GetClient();
-            HttpResponseMessage response = await client.GetAsync("api/Locals/" + id);
+            HttpResponseMessage response = await client.GetAsync("api/Meteorologias/" + id);
             if (response.IsSuccessStatusCode)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                var local = JsonConvert.DeserializeObject<Local>(content);
-                if (local == null) return HttpNotFound();
-                return View(local);
+                var meteorologia = JsonConvert.DeserializeObject<Local>(content);
+                if (meteorologia == null) return HttpNotFound();
+                return View(meteorologia);
             }
             return Content("Ocorreu um erro: " + response.StatusCode);
         }
 
-        // POST: Locals/Delete/5
+        // POST: Meteorologias/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(int id)
@@ -165,7 +171,7 @@ namespace Visita.Controllers
             try
             {
                 var client = WebApiHttpClient.GetClient();
-                var response = await client.DeleteAsync("api/Locals/" + id);
+                var response = await client.DeleteAsync("api/Meteorologias/" + id);
                 if (response.IsSuccessStatusCode)
                 {
                     return RedirectToAction("Index");

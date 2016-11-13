@@ -1,0 +1,98 @@
+﻿@model ModelLibrary.Models.Meteorologia
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Meteorologia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Local.NomeLocal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Local.NomeLocal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDeLeitura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDeLeitura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoraDeLeitura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoraDeLeitura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Temperatura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Temperatura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Humidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Humidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pressao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pressao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NO2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NO2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CO2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CO2)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MeteorologiaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

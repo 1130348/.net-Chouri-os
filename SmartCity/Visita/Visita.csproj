@@ -200,8 +200,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LocalsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MeteorologiasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -271,11 +271,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Locals\Create.cshtml" />
-    <Content Include="Views\Locals\Delete.cshtml" />
-    <Content Include="Views\Locals\Details.cshtml" />
-    <Content Include="Views\Locals\Edit.cshtml" />
-    <Content Include="Views\Locals\Index.cshtml" />
+    <Content Include="Views\Meteorologias\Create.cshtml" />
+    <Content Include="Views\Meteorologias\Delete.cshtml" />
+    <Content Include="Views\Meteorologias\Details.cshtml" />
+    <Content Include="Views\Meteorologias\Edit.cshtml" />
+    <Content Include="Views\Meteorologias\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
