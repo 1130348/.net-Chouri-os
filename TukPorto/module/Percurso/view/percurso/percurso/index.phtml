@@ -1,0 +1,33 @@
+<strong>Module:</strong> Percurso &raquo;
+<strong>Controller:</strong> Percurso &raquo;
+<strong>Action:</strong> index
+
+<?php
+
+$title = 'My Percursos';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+<p>
+	<a href="<?php echo $this->url('percurso', array('action'=>'add'));?>">Add new Percurso</a>
+</p>
+
+<table class="table">
+<tr>
+    <th>Descricao</th>
+    <th>Data</th>
+    <th>&nbsp;</th>
+</tr>
+<?php foreach ($percursos as $percurso) : ?>
+<tr>
+    <td><?php echo $this->escapeHtml($percurso->descricao);?></td>
+    <td><?php echo $this->escapeHtml($percurso->data);?></td>
+    <td>
+        <a href="<?php echo $this->url('percurso',
+            array('action'=>'edit', 'id' => $percurso->id));?>">Edit</a>
+        <a href="<?php echo $this->url('percurso',
+            array('action'=>'delete', 'id' => $percurso->id));?>">Delete</a>
+    </td>
+</tr>
+<?php endforeach; ?>
+</table>

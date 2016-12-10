@@ -1,0 +1,19 @@
+<strong>Module:</strong>        Percurso &raquo;
+<strong>Controller:</strong>    Percurso &raquo;
+<strong>Action:</strong>        add
+
+<?php
+$title = 'Add new Percurso';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+<?php
+$form->setAttribute('action', $this->url('percurso', array('action' => 'add')));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+echo $this->formHidden($form->get('id'));
+echo $this->formRow($form->get('descricao'));
+echo $this->formRow($form->get('data'));
+echo $this->formSubmit($form->get('submit'));
+echo $this->form()->closeTag();
