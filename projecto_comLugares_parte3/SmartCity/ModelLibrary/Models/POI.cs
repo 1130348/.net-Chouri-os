@@ -12,7 +12,6 @@ namespace ModelLibrary.Models
         [DisplayName("Nome")]
 
         public string creator { get; set; }
-        [DisplayName("criador")]
         public string NomePonto { get; set; }
         [DisplayName("Descrição")]
         public string DescricaoPonto { get; set; }
