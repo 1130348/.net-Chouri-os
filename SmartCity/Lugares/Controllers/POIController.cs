@@ -10,6 +10,7 @@ using ModelLibrary.Models;
 
 namespace Lugares.Controllers
 {
+    [Authorize(Roles = "Editor")]
     public class POIController : Controller
     {
         private Datum db = new Datum();
@@ -113,7 +114,6 @@ namespace Lugares.Controllers
                 // Log the error
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
             }
-
             return View(pOI);
         }
 

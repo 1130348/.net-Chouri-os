@@ -12,6 +12,8 @@ namespace ModelLibrary.Models
         [DisplayName("Nome")]
         public string NomePonto { get; set; }
         [DisplayName("Descrição")]
+        
+        public string creator { get; set; }
         public string DescricaoPonto { get; set; }
 
         public virtual Local Local { get; set; }

@@ -8,3 +8,8 @@ C:\Users\renat\Desktop\IT3\SmartCity\ModelLibrary\bin\Debug\ModelLibrary.pdb
 C:\Users\renat\Desktop\IT3\SmartCity\ModelLibrary\obj\Debug\ModelLibrary.csprojResolveAssemblyReference.cache
 C:\Users\renat\Desktop\IT3\SmartCity\ModelLibrary\obj\Debug\ModelLibrary.dll
 C:\Users\renat\Desktop\IT3\SmartCity\ModelLibrary\obj\Debug\ModelLibrary.pdb
+C:\Users\vitor\Documents\arqsi_2it\SmartCity\ModelLibrary\bin\Debug\ModelLibrary.dll
+C:\Users\vitor\Documents\arqsi_2it\SmartCity\ModelLibrary\bin\Debug\ModelLibrary.pdb
+C:\Users\vitor\Documents\arqsi_2it\SmartCity\ModelLibrary\obj\Debug\ModelLibrary.csprojResolveAssemblyReference.cache
+C:\Users\vitor\Documents\arqsi_2it\SmartCity\ModelLibrary\obj\Debug\ModelLibrary.dll
+C:\Users\vitor\Documents\arqsi_2it\SmartCity\ModelLibrary\obj\Debug\ModelLibrary.pdb

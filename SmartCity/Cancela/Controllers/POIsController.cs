@@ -9,9 +9,11 @@ using System.Web.Http.Description;
 using Lugares.DAL;
 using ModelLibrary.Models;
 using Cancela.Models;
+using Microsoft.AspNet.Identity;
 
 namespace Cancela.Controllers
 {
+    [Authorize(Roles = "Editor")]
     public class POIsController : ApiController
     {
         private Datum db = new Datum();
@@ -51,6 +53,10 @@ namespace Cancela.Controllers
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
+            }
+            if(pOI.creator != User.Identity.GetUserName())
+            {
+                return BadRequest();
             }
 
             if (id != pOI.ID)
@@ -100,7 +106,7 @@ namespace Cancela.Controllers
                 DescricaoPonto = pOI.DescricaoPonto,
                 NomeLocal = pOI.Local.NomeLocal
             };
-
+            pOI.creator = User.Identity.GetUserName();
             return CreatedAtRoute("DefaultApi", new { id = pOI.ID }, dto);
         }
 
@@ -109,6 +115,12 @@ namespace Cancela.Controllers
         public async Task<IHttpActionResult> DeletePOI(int id)
         {
             POI pOI = await db.PontosDeInteresse.FindAsync(id);
+
+            if (pOI.creator != User.Identity.GetUserName())
+            {
+                return BadRequest();
+            }
+
             if (pOI == null)
             {
                 return NotFound();
