@@ -1,46 +1,60 @@
-﻿@model IEnumerable<ModelLibrary.Models.POI>
+﻿@model PagedList.IPagedList<ModelLibrary.Models.POI>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Pontos de Interesse";
 }
 
-<h2>Index</h2>
+<h2>Pontos de Interesse</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Criar novo POI", "Create")
 </p>
-
+@using (Html.BeginForm("Index", "POI", FormMethod.Get))
+{
+    <p>
+        Procurar por Local: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Pesquisar" />
+    </p>
+}
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Local.NomeLocal)
+            @Html.ActionLink("Local", "Index", new { sortOrder = ViewBag.LocalSortParm, currentFilter = ViewBag.CurrentFilter })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NomePonto)
+            @Html.ActionLink("Nome", "Index", new { sortOrder = ViewBag.NameSortParm })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DescricaoPonto)
+            @Html.ActionLink("Descrição", "Index", new { sortOrder = ViewBag.DescricaoSortParm })
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Local.NomeLocal)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NomePonto)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DescricaoPonto)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Local.NomeLocal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomePonto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescricaoPonto)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Apagar", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
 
 </table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
