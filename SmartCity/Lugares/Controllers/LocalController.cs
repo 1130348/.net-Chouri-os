@@ -9,7 +9,6 @@ using ModelLibrary.Models;
 
 namespace Lugares.Controllers
 {
-    [Authorize(Roles = "Editor")]
     public class LocalController : Controller
     {
         private Datum db = new Datum();

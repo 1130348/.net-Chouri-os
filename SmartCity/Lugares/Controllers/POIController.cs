@@ -10,7 +10,6 @@ using ModelLibrary.Models;
 
 namespace Lugares.Controllers
 {
-    [Authorize(Roles = "Editor")]
     public class POIController : Controller
     {
         private Datum db = new Datum();

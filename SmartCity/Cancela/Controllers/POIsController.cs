@@ -13,7 +13,6 @@ using Microsoft.AspNet.Identity;
 
 namespace Cancela.Controllers
 {
-    [Authorize(Roles = "Editor")]
     public class POIsController : ApiController
     {
         private Datum db = new Datum();
@@ -53,10 +52,6 @@ namespace Cancela.Controllers
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
-            }
-            if(pOI.creator != User.Identity.GetUserName())
-            {
-                return BadRequest();
             }
 
             if (id != pOI.ID)
@@ -116,10 +111,6 @@ namespace Cancela.Controllers
         {
             POI pOI = await db.PontosDeInteresse.FindAsync(id);
 
-            if (pOI.creator != User.Identity.GetUserName())
-            {
-                return BadRequest();
-            }
 
             if (pOI == null)
             {

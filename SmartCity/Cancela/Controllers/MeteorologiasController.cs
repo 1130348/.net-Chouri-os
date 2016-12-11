@@ -12,7 +12,6 @@ using Cancela.Models;
 
 namespace Cancela.Controllers
 {
-    [Authorize(Roles = "Editor")]
     public class MeteorologiasController : ApiController
     {
         private Datum db = new Datum();
