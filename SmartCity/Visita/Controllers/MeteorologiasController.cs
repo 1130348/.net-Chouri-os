@@ -12,23 +12,99 @@ using Visita.Models;
 using Visita.Helpers;
 using System.Net.Http;
 using Newtonsoft.Json;
+using Cancela.Models;
 
 namespace Visita.Controllers
 {
     public class MeteorologiasController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        //private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Meteorologias
-        public async Task<ActionResult> Index()
+         public async Task<ActionResult> Index(String NomeLocal, String DataDeLeitura, String HoraDeLeitura)
         {
             var client = WebApiHttpClient.GetClient();
             HttpResponseMessage response = await client.GetAsync("api/Meteorologias");
-            if (response.IsSuccessStatusCode)
+            HttpResponseMessage responsePOI = await client.GetAsync("api/POIS");
+            if (response.IsSuccessStatusCode && responsePOI.IsSuccessStatusCode) 
             {
                 string content = await response.Content.ReadAsStringAsync();
                 var meteorologias = JsonConvert.DeserializeObject<IEnumerable<Meteorologia>>(content);
-                return View(meteorologias);
+                var meteorologiasdto = JsonConvert.DeserializeObject<IEnumerable<MeteorologiaDTO>>(content);
+
+                string contentpois = await responsePOI.Content.ReadAsStringAsync();
+                var poisdto = JsonConvert.DeserializeObject<IEnumerable<POIDTO>>(contentpois);
+
+                var lstPOI = new List<String>();
+                var lstDate = new List<DateTime>();
+                var lstHora = new List<TimeSpan>();
+
+                foreach (var loc in poisdto)
+                {
+                    lstPOI.Add(loc.NomePonto);
+                }
+
+                foreach (var xx in meteorologias)
+                {
+                    foreach (var cc in meteorologiasdto)
+                    {
+                        if (xx.MeteorologiaID == cc.MeteorologiaID)
+                        {
+                            xx.Local = new Local();
+                            xx.Local.NomeLocal = cc.NomeLocal;
+                            if (!lstDate.Contains(xx.DataDeLeitura))
+                            {
+                                lstDate.Add(xx.DataDeLeitura);
+                            }
+                            if (!lstHora.Contains(xx.HoraDeLeitura))
+                            {
+                                lstHora.Add(xx.HoraDeLeitura);
+                            }
+                        }
+                    }
+                }
+
+                ViewBag.NomeLocal = lstPOI.OrderBy(i => i).Select(r => new SelectListItem { Text = r });
+                ViewBag.DataDeLeitura = lstDate.OrderBy(i => i).Select(r => new SelectListItem { Text = r.ToShortDateString() });
+                ViewBag.HoraDeLeitura = lstHora.OrderBy(i => i).Select(t => new SelectListItem { Text = t.ToString() });
+
+                var lstFilter = new List<Meteorologia>();
+                foreach (var meteo in meteorologias)
+                {
+                    Boolean add = true;
+                    if (!String.IsNullOrEmpty(NomeLocal))
+                    {
+                        foreach (var yy in poisdto)
+                        {
+                            if ((meteo.Local.NomeLocal != yy.NomeLocal) && (NomeLocal == yy.NomePonto))
+                            {
+                                add = false;
+                            }
+
+                        }
+                    }
+                    if (!String.IsNullOrEmpty(DataDeLeitura))
+                    {
+                        if (DateTime.Compare(meteo.DataDeLeitura, Convert.ToDateTime(DataDeLeitura)) != 0)
+                        {
+                            add = false;
+                        }
+
+                    }
+                    if (!String.IsNullOrEmpty(HoraDeLeitura))
+                    {
+                        if (meteo.HoraDeLeitura.ToString() != HoraDeLeitura)
+                        {
+                            add = false;
+                        }
+                    }
+                    if (add)
+                    {
+                        lstFilter.Add(meteo);
+                    }
+                }
+
+                return View(lstFilter.OrderBy(s => s.DataDeLeitura).ThenBy(n => n.HoraDeLeitura));
             }
             else
             {
@@ -187,13 +263,13 @@ namespace Visita.Controllers
             }
         }
 
-        protected override void Dispose(bool disposing)
+       /* protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
                 db.Dispose();
             }
             base.Dispose(disposing);
-        }
+        }*/
     }
 }

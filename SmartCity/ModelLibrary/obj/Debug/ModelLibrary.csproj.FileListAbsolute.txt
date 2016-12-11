@@ -3,3 +3,8 @@ C:\SmartCity\ModelLibrary\bin\Debug\ModelLibrary.pdb
 C:\SmartCity\ModelLibrary\obj\Debug\ModelLibrary.csprojResolveAssemblyReference.cache
 C:\SmartCity\ModelLibrary\obj\Debug\ModelLibrary.dll
 C:\SmartCity\ModelLibrary\obj\Debug\ModelLibrary.pdb
+C:\Users\renat\Desktop\IT3\SmartCity\ModelLibrary\bin\Debug\ModelLibrary.dll
+C:\Users\renat\Desktop\IT3\SmartCity\ModelLibrary\bin\Debug\ModelLibrary.pdb
+C:\Users\renat\Desktop\IT3\SmartCity\ModelLibrary\obj\Debug\ModelLibrary.csprojResolveAssemblyReference.cache
+C:\Users\renat\Desktop\IT3\SmartCity\ModelLibrary\obj\Debug\ModelLibrary.dll
+C:\Users\renat\Desktop\IT3\SmartCity\ModelLibrary\obj\Debug\ModelLibrary.pdb

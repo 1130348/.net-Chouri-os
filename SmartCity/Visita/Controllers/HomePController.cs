@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Visita.Controllers
 {
-    public class HomeController : Controller
+    public class HomePController : Controller
     {
         public ActionResult Index()
         {
