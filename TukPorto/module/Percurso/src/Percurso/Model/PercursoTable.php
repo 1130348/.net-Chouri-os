@@ -21,7 +21,6 @@ class PercursoTable
  public function getPercurso($id) {
      $id = (int) $id;
      $rowSet = $this->tableGateway->select(array('id' => $id));
-     $row = null;
      $row -> $rowSet->current();
      if (!$row) {
         throw new \Exception("Could not find row $id");

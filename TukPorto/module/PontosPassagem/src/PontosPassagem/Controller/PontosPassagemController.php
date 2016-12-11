@@ -11,6 +11,8 @@ namespace PontosPassagem\Controller;
 
 use Zend\Http\Client;
 use Zend\Http\Request;
+use Zend\Json\Json;
+use Zend\View\Model\ViewModel;
 use Zend\Mvc\Controller\AbstractActionController;
 
 class PontosPassagemController extends AbstractActionController
@@ -26,7 +28,7 @@ class PontosPassagemController extends AbstractActionController
         $client->setMethod(Request::METHOD_GET);
         $response = $client->send();
         $body=$response->getBody();
-        $musicas=Json::decode($body, true);
+        $pontospassagem=Json::decode($body, true);
         return new ViewModel(array(
                     'arr' => $pontospassagem,
          ));

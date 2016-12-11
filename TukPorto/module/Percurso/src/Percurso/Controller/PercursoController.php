@@ -38,9 +38,9 @@ class PercursoController extends AbstractActionController
     
             if ($form->isValid()) {
                 $percurso->exchangeArray($form->getData());
-                $this->getAlbumTable()->saveAlbum($percurso);
+                $this->getPercursoTable()->savePercurso($percurso);
     
-                // Redirect to list of albums
+               
                 return $this->redirect()->toRoute('percurso');
             }
         }
@@ -55,8 +55,7 @@ class PercursoController extends AbstractActionController
                 'action' => 'index'
             ));
         }
-        // Get the Album with the specified id. An exception is thrown
-        // if it cannot be found, in which case go to the index page.
+        
         try {
             $percurso = $this->getPercursoTable()->getPercurso($id);
         }
@@ -74,7 +73,6 @@ class PercursoController extends AbstractActionController
             $form->setData($request->getPost());
             if ($form->isValid()) {
                 $this->getPercursoTable()->savePercurso($percurso);
-                // Redirect to list of albums
                 return $this->redirect()->toRoute('percurso');
             }
         }
@@ -98,7 +96,6 @@ class PercursoController extends AbstractActionController
                 $id = (int) $request->getPost('id');
                 $this->getPercursoTable()->deletePercurso($id);
             }
-            // Redirect to list of albums
             return $this->redirect()->toRoute('percurso');
         }
         return array(
