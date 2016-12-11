@@ -1,0 +1,285 @@
+C:\SmartCity\Lugares\bin\ApplicationInsights.config
+C:\SmartCity\Lugares\bin\roslyn\csc.exe
+C:\SmartCity\Lugares\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\SmartCity\Lugares\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\SmartCity\Lugares\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\SmartCity\Lugares\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\SmartCity\Lugares\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\SmartCity\Lugares\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\SmartCity\Lugares\bin\roslyn\System.Collections.Immutable.dll
+C:\SmartCity\Lugares\bin\roslyn\System.Reflection.Metadata.dll
+C:\SmartCity\Lugares\bin\roslyn\vbc.exe
+C:\SmartCity\Lugares\bin\roslyn\VBCSCompiler.exe
+C:\SmartCity\Lugares\bin\roslyn\VBCSCompiler.exe.config
+C:\SmartCity\Lugares\bin\Lugares.dll.config
+C:\SmartCity\Lugares\bin\Lugares.dll
+C:\SmartCity\Lugares\bin\Lugares.pdb
+C:\SmartCity\Lugares\bin\Antlr3.Runtime.dll
+C:\SmartCity\Lugares\bin\EntityFramework.dll
+C:\SmartCity\Lugares\bin\EntityFramework.SqlServer.dll
+C:\SmartCity\Lugares\bin\Microsoft.AI.Agent.Intercept.dll
+C:\SmartCity\Lugares\bin\Microsoft.AI.DependencyCollector.dll
+C:\SmartCity\Lugares\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\SmartCity\Lugares\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\SmartCity\Lugares\bin\Microsoft.AI.Web.dll
+C:\SmartCity\Lugares\bin\Microsoft.AI.WindowsServer.dll
+C:\SmartCity\Lugares\bin\Microsoft.ApplicationInsights.dll
+C:\SmartCity\Lugares\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\SmartCity\Lugares\bin\Microsoft.Web.Infrastructure.dll
+C:\SmartCity\Lugares\bin\ModelLibrary.dll
+C:\SmartCity\Lugares\bin\Newtonsoft.Json.dll
+C:\SmartCity\Lugares\bin\PagedList.dll
+C:\SmartCity\Lugares\bin\PagedList.Mvc.dll
+C:\SmartCity\Lugares\bin\System.Web.Helpers.dll
+C:\SmartCity\Lugares\bin\System.Web.Mvc.dll
+C:\SmartCity\Lugares\bin\System.Web.Optimization.dll
+C:\SmartCity\Lugares\bin\System.Web.Razor.dll
+C:\SmartCity\Lugares\bin\System.Web.WebPages.Deployment.dll
+C:\SmartCity\Lugares\bin\System.Web.WebPages.dll
+C:\SmartCity\Lugares\bin\System.Web.WebPages.Razor.dll
+C:\SmartCity\Lugares\bin\WebGrease.dll
+C:\SmartCity\Lugares\bin\EntityFramework.xml
+C:\SmartCity\Lugares\bin\EntityFramework.SqlServer.xml
+C:\SmartCity\Lugares\bin\Microsoft.AI.DependencyCollector.xml
+C:\SmartCity\Lugares\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\SmartCity\Lugares\bin\Microsoft.AI.Web.xml
+C:\SmartCity\Lugares\bin\Microsoft.AI.WindowsServer.xml
+C:\SmartCity\Lugares\bin\Microsoft.ApplicationInsights.xml
+C:\SmartCity\Lugares\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\SmartCity\Lugares\bin\PagedList.xml
+C:\SmartCity\Lugares\bin\PagedList.Mvc.xml
+C:\SmartCity\Lugares\bin\System.Web.Helpers.xml
+C:\SmartCity\Lugares\bin\System.Web.Mvc.xml
+C:\SmartCity\Lugares\bin\System.Web.Optimization.xml
+C:\SmartCity\Lugares\bin\System.Web.Razor.xml
+C:\SmartCity\Lugares\bin\System.Web.WebPages.xml
+C:\SmartCity\Lugares\bin\System.Web.WebPages.Deployment.xml
+C:\SmartCity\Lugares\bin\System.Web.WebPages.Razor.xml
+C:\SmartCity\Lugares\bin\Antlr3.Runtime.pdb
+C:\SmartCity\Lugares\bin\Newtonsoft.Json.xml
+C:\SmartCity\Lugares\obj\Debug\Lugares.dll
+C:\SmartCity\Lugares\obj\Debug\Lugares.pdb
+C:\SmartCity\Lugares\obj\Debug\Lugares.csprojResolveAssemblyReference.cache
+C:\SmartCity\Lugares\obj\Debug\Lugares.Migrations.InitialCreate.resources
+C:\SmartCity\Lugares\obj\Debug\Lugares.csproj.GenerateResource.Cache
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\ApplicationInsights.config
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\roslyn\csc.exe
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\roslyn\vbc.exe
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\roslyn\VBCSCompiler.exe
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Lugares.dll.config
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Lugares.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Lugares.pdb
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Antlr3.Runtime.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\EntityFramework.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\EntityFramework.SqlServer.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Microsoft.AI.Web.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Microsoft.ApplicationInsights.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\ModelLibrary.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Newtonsoft.Json.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\PagedList.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\PagedList.Mvc.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\System.Web.Helpers.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\System.Web.Mvc.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\System.Web.Optimization.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\System.Web.Razor.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\System.Web.WebPages.Deployment.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\System.Web.WebPages.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\System.Web.WebPages.Razor.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\WebGrease.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\EntityFramework.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\EntityFramework.SqlServer.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Microsoft.AI.Web.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Microsoft.ApplicationInsights.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\PagedList.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\PagedList.Mvc.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\System.Web.Helpers.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\System.Web.Mvc.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\System.Web.Optimization.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\System.Web.Razor.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\System.Web.WebPages.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\System.Web.WebPages.Deployment.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\System.Web.WebPages.Razor.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Antlr3.Runtime.pdb
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\bin\Newtonsoft.Json.xml
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\obj\Debug\Lugares.csprojResolveAssemblyReference.cache
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\obj\Debug\Lugares.Migrations.InitialCreate.resources
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\obj\Debug\Lugares.csproj.GenerateResource.Cache
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\obj\Debug\Lugares.dll
+C:\Users\renat\Desktop\ITERACAO2\SmartCity\Lugares\obj\Debug\Lugares.pdb
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\ApplicationInsights.config
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\roslyn\csc.exe
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\roslyn\vbc.exe
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\roslyn\VBCSCompiler.exe
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Lugares.dll.config
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Lugares.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Lugares.pdb
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Antlr3.Runtime.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\EntityFramework.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\EntityFramework.SqlServer.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Microsoft.AI.Web.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Microsoft.ApplicationInsights.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\ModelLibrary.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Newtonsoft.Json.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\PagedList.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\PagedList.Mvc.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\System.Web.Helpers.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\System.Web.Mvc.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\System.Web.Optimization.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\System.Web.Razor.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\System.Web.WebPages.Deployment.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\System.Web.WebPages.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\System.Web.WebPages.Razor.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\WebGrease.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\EntityFramework.xml
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\EntityFramework.SqlServer.xml
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Microsoft.AI.Web.xml
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Microsoft.ApplicationInsights.xml
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\PagedList.xml
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\PagedList.Mvc.xml
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\System.Web.Helpers.xml
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\System.Web.Mvc.xml
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\System.Web.Optimization.xml
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\System.Web.Razor.xml
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\System.Web.WebPages.xml
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\System.Web.WebPages.Deployment.xml
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\System.Web.WebPages.Razor.xml
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Antlr3.Runtime.pdb
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\bin\Newtonsoft.Json.xml
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\obj\Debug\Lugares.csprojResolveAssemblyReference.cache
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\obj\Debug\Lugares.Migrations.InitialCreate.resources
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\obj\Debug\Lugares.csproj.GenerateResource.Cache
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\obj\Debug\Lugares.dll
+C:\Users\renat\Desktop\New folder (3)\SmartCity\Lugares\obj\Debug\Lugares.pdb
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\ApplicationInsights.config
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\csc.exe
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\vbc.exe
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\VBCSCompiler.exe
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Lugares.dll.config
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Lugares.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Lugares.pdb
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Antlr3.Runtime.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\EntityFramework.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\EntityFramework.SqlServer.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.AI.Web.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.ApplicationInsights.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\ModelLibrary.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Newtonsoft.Json.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\PagedList.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\PagedList.Mvc.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\System.Web.Helpers.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\System.Web.Mvc.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\System.Web.Optimization.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\System.Web.Razor.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\System.Web.WebPages.Deployment.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\System.Web.WebPages.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\System.Web.WebPages.Razor.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\WebGrease.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\EntityFramework.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\EntityFramework.SqlServer.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.AI.Web.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.ApplicationInsights.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\PagedList.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\PagedList.Mvc.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\System.Web.Helpers.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\System.Web.Mvc.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\System.Web.Optimization.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\System.Web.Razor.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\System.Web.WebPages.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\System.Web.WebPages.Deployment.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\System.Web.WebPages.Razor.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Antlr3.Runtime.pdb
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Newtonsoft.Json.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\obj\Debug\Lugares.csprojResolveAssemblyReference.cache
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\obj\Debug\Lugares.Migrations.InitialCreate.resources
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\obj\Debug\Lugares.csproj.GenerateResource.Cache
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\obj\Debug\Lugares.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\obj\Debug\Lugares.pdb
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\csc.exe.config
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\csc.rsp
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\csi.exe
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\csi.rsp
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\System.AppContext.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\vbc.exe.config
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\roslyn\vbc.rsp
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.Owin.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.Owin.Security.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Owin.dll
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.Owin.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.Owin.Security.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\vitor\Desktop\arqsi_2it\SmartCity\Lugares\bin\Microsoft.Owin.Security.OAuth.xml

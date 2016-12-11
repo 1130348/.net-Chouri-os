@@ -1,0 +1,62 @@
+﻿@model PagedList.IPagedList<ModelLibrary.Models.Local>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Locais";
+}
+
+<h2>Locais</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@using (Html.BeginForm("Index", "Local", FormMethod.Get))
+{
+    <p>
+        Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            GPS Latitude
+        </th>
+        <th>
+            GPS Longitude
+        </th>
+        <th>
+            @Html.ActionLink("Nome", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GPS_Lat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GPS_Long)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeLocal)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.LocalID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.LocalID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.LocalID })
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
